@@ -1,0 +1,109 @@
+
+.//cast_bf16_to_f32.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	nop; 	add.i32  b11111 I5, I1, I0; 	nop; 	cache_invalidate 
+               	nop; 	mov_irf_dim  0x0 S3, I0; 	nop; 	cache_flush 
+               	nop; 	mov_irf_dim  0x1 S0, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x0 S4, I5; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x1 S1, I5; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S2, I0; 	nop; 	nop
+               	nop; 	shl.i32  S6, S3, 0x7; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S3, I5; 	nop; 	nop
+               	nop; 	shl.i32  S7, S4, 0x7; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S4, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S5, I5; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S6, S7, 128, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_1:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S4, S5, 1, <, .LBB0_7
+               	set_indx  I2, b00001, S32; 	set_indx  I3, b00001, S32; 	mov  V2, V1; 	nop
+
+.LBB0_2:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S2, S3, 1, <, .LBB0_6
+               	set_indx  I2, b01000, S33; 	set_indx  I4, b01000, S33; 	mov  V2, V1; 	set_indx  I3, b01000, S33
+
+.LBB0_3:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b00100, S34; 	mov_irf_dim  0x0 S6, I3; 	mov  V2, V1; 	set_indx  I3, b00100, S34
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	add.i32  S6, S6, 0x40; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I4, b00001, S6; 	set_indx  I4, b00100, S34; 	nop; 	nop
+               	loop S0, S1, 1, <, .LBB0_5
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	set_indx  I2, b00010, S35; 	set_indx  I4, b00010, S35; 	nop; 	set_indx  I3, b00010, S35
+               	ld_tnsr  V2, 0x0, I2; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	unpack.bf16 source_group=0 element_stride=2 group_half=0 V1, V2; 	nop
+               	nop; 	nop; 	unpack.bf16 source_group=1 element_stride=2 group_half=0 V0, V2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov  V2, V1; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V2, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=2 wr_lg=0x1 wr_ug=0x1 V2, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=3 wr_lg=0x1 wr_ug=0x1 V2, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=0 wr_lg=0x1 wr_ug=0x1 V0, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	convert.bf16 all_lanes target_type=fp32 rhne D4, V2; 	nop // D4=[V4,V5]
+               	nop; 	nop; 	mov_dg src=2 dst=1 wr_lg=0x1 wr_ug=0x1 V0, V0, 0xffffffff; 	st_tnsr  0x1, I3, V4
+               	mov  V1, V2; 	nop; 	mov_dg src=3 dst=2 wr_lg=0x1 wr_ug=0x1 V0, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	convert.bf16 all_lanes target_type=fp32 rhne D4, V0; 	nop // D4=[V4,V5]
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I4, V4
+
+.LBB0_5:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov  V1, V2; 	nop
+
+.LBB0_6:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov  V1, V2; 	nop
+
+.LBB0_7:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov  V1, V2; 	nop
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

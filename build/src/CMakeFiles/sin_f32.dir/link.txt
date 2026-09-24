@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsin_f32.a sin_f32_x86.o
+/usr/bin/ranlib libsin_f32.a

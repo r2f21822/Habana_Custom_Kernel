@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuser_lut_f32_gaudi2.a user_lut_f32_gaudi2_x86.o
+/usr/bin/ranlib libuser_lut_f32_gaudi2.a

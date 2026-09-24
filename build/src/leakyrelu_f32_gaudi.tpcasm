@@ -1,0 +1,88 @@
+
+.//leakyrelu_f32_gaudi.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	set_indx  I2, b11111, 0x0; 	add.i32  b11111 I3, I1, I0; 	nop; 	cache_invalidate 
+               	nop; 	mov_irf_dim  0x0 S1, I0; 	nop; 	cache_flush 
+               	nop; 	mov_irf_dim  0x1 S3, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x0 S2, I3; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x1 S4, I3; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S7, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S8, I3; 	nop; 	nop
+               	nop; 	shl.i32  S1, S1, 0x6; 	nop; 	nop
+               	nop; 	shl.i32  S2, S2, 0x6; 	nop; 	nop
+               	nop; 	shl.i32  S3, S3, 0x2; 	nop; 	nop
+               	nop; 	shl.i32  S4, S4, 0x2; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S5, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S6, I3; 	nop; 	nop
+               	loop S7, S8, 1, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_1:
+               	set_indx  I2, b01000, S32; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	loop S5, S6, 1, <, .LBB0_7
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_2:
+               	set_indx  I2, b00100, S33; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	loop S1, S2, 64, <, .LBB0_6
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_3:
+               	set_indx  I2, b00001, S34; 	nop; 	nop; 	nop
+               	mov  b11111 I5, I2; 	mov  b11111 I4, I2; 	nop; 	nop
+               	loop S3, S4, 4, <, .LBB0_5
+               	mov  b11111 I3, I2; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b00010, S35; 	add.i32  S7, S35, 0x1; 	nop; 	nop
+               	ld_tnsr  V0, 0x0, I2; 	add.i32  S8, S35, 0x2; 	nop; 	nop
+               	nop; 	add.i32  S9, S35, 0x3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I4, b00010, S7; 	nop; 	nop; 	nop
+               	ld_tnsr  V1, 0x0, I4; 	set_indx  I5, b00010, S8; 	cmp_grt.f32  VP1, V0, 0x0; 	nop
+               	ld_tnsr  V2, 0x0, I5; 	nop; 	nop; 	set_indx  I3, b00010, S9
+               	ld_tnsr  V3, 0x0, I3; 	nop; 	mul.f32  V0, V0, S0, !VP1; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I2, V0
+               	nop; 	nop; 	cmp_grt.f32  VP1, V1, 0x0; 	nop
+               	nop; 	nop; 	cmp_grt.f32  VP2, V2, 0x0; 	nop
+               	nop; 	nop; 	cmp_grt.f32  VP3, V3, 0x0; 	nop
+               	nop; 	nop; 	mul.f32  V1, V1, S0, !VP1; 	nop
+               	nop; 	nop; 	mul.f32  V2, V2, S0, !VP2; 	st_tnsr  0x1, I4, V1
+               	nop; 	nop; 	mul.f32  V3, V3, S0, !VP3; 	st_tnsr  0x1, I5, V2
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I3, V3
+
+.LBB0_5:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+
+.LBB0_6:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+
+.LBB0_7:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

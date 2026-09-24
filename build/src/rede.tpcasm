@@ -1,0 +1,106 @@
+
+.//rede.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	set_indx  I2, b11111, 0x0; 	add.i32  b11111 I3, I1, I0; 	nop; 	set_indx  I4, b11111, 0x0
+               	ld_l mmio S0, 0x410; 	mov_irf_dim  0x0 S1, I0; 	nop; 	gen_addr  AD0, 0x2, I4
+               	mov  b11111 I4, I2; 	mov_irf_dim  0x0 S2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S1, S2, 1, <, .LBB0_4
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_1:
+               	ld_g  S1, AD0; 	nop; 	nop; 	nop
+               	loop 0, S0, 1, <, .LBB0_3
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_2:
+               	set_indx  I2, b00001, S33; 	set_indx  I2, b00010, S32; 	nop; 	set_indx  I3, b00001, S33
+               	gen_addr  AD2, 0x1, I3; 	nop; 	nop; 	gen_addr  AD1, 0x0, I2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_g  S2, AD1; 	nop; 	nop; 	nop
+               	ld_g  S3, AD2; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	mac.f32  S1, S3, S2; 	nop; 	nop
+
+.LBB0_3:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V4, 0x3f000000; 	mul.f32  S1, S1, 0x3f000000; 	nop; 	set_indx  I4, b00001, S32
+               	mov.f32  V5, 0x3f7ffffe; 	nop; 	mov.f32  V6, S1; 	nop
+               	mov.f32  V7, 0x3f800000; 	nop; 	nop; 	nop
+               	mov.f32  V8, 0x7fffffff; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.f32 force_sign0 V9, V6, V6, V6; 	nop
+               	nop; 	nop; 	extract_exp.f32  V2, V6; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32 tanh D0, V9, 0x11; 	nop // D0=[V0,V1]
+               	nop; 	nop; 	cmp_geq.f32  VP1, V9, 0x41000000; 	nop
+               	nop; 	nop; 	cmp_less.i32  VP2, V2, 0x0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	lookup_2c   BV32 D2, V0, 0x0; 	nop; 	sub.f32  V1, V9, V1; 	nop // D2=[V2,V3]
+               	nop; 	nop; 	nop; 	nop
+               	lookup_1c   BV32 V0, V0, 0x0; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mac.f32  V2, V3, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mac.f32  V0, V2, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mul.f32  V0, V0, V9, VP2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_less.f32    V0, V9, 0x41100000, V5, V0, VP1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_geq.f32     V0, V9, 0x41100000, V7, V0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.f32  V0, V0, V6, V0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_grt.u32     V0, V9, 0x7f800000, V8, V0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mac.f32  V4, V0, 0x3f000000; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x3, I4, V4
+
+.LBB0_4:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtrain_batch_f32.a train_batch_f32_x86.o
+/usr/bin/ranlib libtrain_batch_f32.a

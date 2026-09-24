@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprintf_test.a printf_test_x86.o
+/usr/bin/ranlib libprintf_test.a

@@ -37,6 +37,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 #include "user_lut_gaudi2_test.hpp"
 #include "mamba_pscan_gaudi3_test.hpp"
 #include "mamba_pscan_update_gaudi3_test.hpp"
+#include "train_batch_f32_test.hpp"
 
 int check_arg(int argc, char** argv, const char* device, const char* test)
 {
@@ -93,6 +94,7 @@ int main(int argc, char** argv)
             "SpatialConvF32Test         Run SpatialConvF32Test only   " << std::endl <<
             "SinF32Test                 Run SinF32Test only   " << std::endl <<
             "AddF32Test                 Run AddF32Test only   " << std::endl <<
+            "TrainBatchF32Test          Run TrainBatchF32Test only   " << std::endl <<
             "AvgPool2DFwdF32Test        Run AvgPool2DFwdF32Test only   " << std::endl <<
             "AvgPool2DBwdF32Test        Run AvgPool2DBwdF32Test only   " << std::endl <<
             "SearchSortedFwdF32Test     Run SearchSortedFwdF32Test only   " << std::endl <<
@@ -352,6 +354,19 @@ int main(int argc, char** argv)
         addf32ins.SetUp();
         result = addf32ins.runTest();
         addf32ins.TearDown();
+        testCount ++;
+        if (result != 0)
+        {
+            return result;
+        }
+    }
+    //MODIFICACAO
+        if(check_arg(argc, argv, "Gaudi", "TrainBatchF32Test"))
+    {
+        TrainBatchF32Test trainbatchins;
+        trainbatchins.SetUp();
+        result = trainbatchins.runTest();
+        trainbatchins.TearDown();
         testCount ++;
         if (result != 0)
         {

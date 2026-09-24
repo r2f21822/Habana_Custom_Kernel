@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsoftmax_fcd_bf16_gaudi2.a softmax_fcd_bf16_gaudi2_x86.o
+/usr/bin/ranlib libsoftmax_fcd_bf16_gaudi2.a

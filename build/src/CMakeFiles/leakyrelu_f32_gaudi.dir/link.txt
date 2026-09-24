@@ -1,0 +1,2 @@
+/usr/bin/ar qc libleakyrelu_f32_gaudi.a leakyrelu_f32_gaudi_x86.o
+/usr/bin/ranlib libleakyrelu_f32_gaudi.a

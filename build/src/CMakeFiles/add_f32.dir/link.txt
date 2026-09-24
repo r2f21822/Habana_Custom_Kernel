@@ -1,0 +1,2 @@
+/usr/bin/ar qc libadd_f32.a add_f32_x86.o
+/usr/bin/ranlib libadd_f32.a

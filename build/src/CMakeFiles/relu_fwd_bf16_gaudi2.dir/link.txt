@@ -1,0 +1,2 @@
+/usr/bin/ar qc librelu_fwd_bf16_gaudi2.a relu_fwd_bf16_gaudi2_x86.o
+/usr/bin/ranlib librelu_fwd_bf16_gaudi2.a

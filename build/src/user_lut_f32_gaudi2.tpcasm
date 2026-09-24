@@ -1,0 +1,516 @@
+
+.//user_lut_f32_gaudi2.o:	file format elf32-i386
+
+TPC architecture: gaudi2
+
+Disassembly of section .text:
+
+main:
+               	ld_l mmio S0, 0x538; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	or.i32  S0, S0, 0x1000000; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	st_l mmio 0x538, S0 // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	ld_l mmio S0, 0xc1c; 	set_indx  I3, b11111, 0x0; 	mov.i32  V1, 0x0; 	nop
+               	ld_l mmio S1, 0xf0; 	mov  b11111 I2, I3; 	mov  V0, V_LANE_ID_32; 	nop
+               	ld_l mmio S2, 0xf4; 	nop; 	nop; 	nop // compressed, part 1
+               	mov.i32  V2, 0xcdcdcdcd; 	nop; 	nop; 	nop // compressed, part 2
+               	mov.i32  V3, 0x78646e69; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mul.i32  S0, S0, 0x1000; 	nop; 	nop // compressed, part 2
+               	mov.i32  V4, 0x203a; 	nop; 	nop; 	nop // compressed, part 1
+               	mov.i32  V5, 0xffffffff; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	and.u32  V0, V0, 0x1f; 	nop // compressed, part 1
+               	set_indx  I2, b00010, S0; 	nop; 	nop; 	st_l mmio 0xcc0, S1 // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_l mmio 0xcc4, S2
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	loop 0, -64, -1, >, .LBB0_3
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V5
+
+.LBB0_2:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V1, 0xcdcdcdcd; 	nop
+               	mov.i32  V3, 0x202c6425; 	set_indx  I3, b00001, 0x0; 	mov.i32  V2, 0x0; 	nop
+               	mov.i32  V4, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V4
+
+.LBB0_3:
+               	mov  b11111 I3, I2; 	mov.i32  S0, 0x3; 	mov.i32  V5, 0xcdcdcdcd; 	nop
+               	mov.i32  V7, 0xa; 	set_indx  I3, b00001, 0x0; 	mov.i32  V4, 0x0; 	nop
+               	mov.i32  V1, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V8, 0x6261740a; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	mov.i32  V9, 0x3a30656c; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	mov.i32  V6, 0xa20; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V3, 0x3a63; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	lookup      BV32 lut_ptr V2, V0, S0; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V8
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V9
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	loop 0, -64, -1, >, .LBB0_5
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V1
+
+.LBB0_4:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V1, 0xcdcdcdcd; 	nop
+               	mov.i32  V4, 0x202c6625; 	set_indx  I3, b00001, 0x0; 	mov.i32  V3, 0x0; 	nop
+               	mov.i32  V5, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V5
+
+.LBB0_5:
+               	mov  b11111 I3, I2; 	mov.i32  S0, 0x7; 	mov.i32  V7, 0xcdcdcdcd; 	nop
+               	mov.i32  V9, 0xa; 	set_indx  I3, b00001, 0x0; 	mov.i32  V5, 0x0; 	nop
+               	mov.i32  V4, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V10, 0x6261740a; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	mov.i32  V11, 0x3a31656c; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	mov.i32  V8, 0xa20; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V6, 0x203a3063; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	lookup_1c   BV32 lut_ptr V3, V0, S0; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	lookup_2c   BV32 lut_ptr D0, V0, S0; 	mov  b11111 I3, I2; 	nop; 	nop // D0=[V0,V1]
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V9
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V10
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V11
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V8
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	loop 0, -64, -1, >, .LBB0_7
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V4
+
+.LBB0_6:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V4, 0xcdcdcdcd; 	nop
+               	mov.i32  V6, 0x202c6625; 	set_indx  I3, b00001, 0x0; 	mov.i32  V5, 0x0; 	nop
+               	mov.i32  V7, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V7
+
+.LBB0_7:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V5, 0xcdcdcdcd; 	nop
+               	mov.i32  V7, 0xa; 	set_indx  I3, b00001, 0x0; 	mov.i32  V6, 0x0; 	nop
+               	mov.i32  V4, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V8, 0x203a3163; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V8
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	loop 0, -64, -1, >, .LBB0_9
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V4
+
+.LBB0_8:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V4, 0xcdcdcdcd; 	nop
+               	mov.i32  V6, 0x202c6625; 	set_indx  I3, b00001, 0x0; 	mov.i32  V5, 0x0; 	nop
+               	mov.i32  V7, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V7
+
+.LBB0_9:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V5, 0xcdcdcdcd; 	nop
+               	mov.i32  V7, 0xa; 	set_indx  I3, b00001, 0x0; 	mov.i32  V6, 0x0; 	nop
+               	mov.i32  V4, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V8, 0x203a3263; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V8
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	loop 0, -64, -1, >, .LBB0_11
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V4
+
+.LBB0_10:
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V4, 0xcdcdcdcd; 	nop
+               	mov.i32  V6, 0x202c6625; 	set_indx  I3, b00001, 0x0; 	mov.i32  V5, 0x0; 	nop
+               	mov.i32  V7, 0xffffffff; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V7
+
+.LBB0_11:
+               	mov  b11111 I4, I2; 	set_indx  I3, b11111, 0x0; 	mov.i32  V4, 0xcdcdcdcd; 	nop
+               	ld_tnsr  V6, 0x0, I3; 	set_indx  I4, b00001, 0x0; 	mov.i32  V5, 0x0; 	nop
+               	ld_tnsr  V8, 0x1, I3; 	mov  b11111 I2, I4; 	mov.i32  V7, 0xa; 	nop
+               	mov  b11111 I4, I2; 	nop; 	mov.i32  V9, 0xffffffff; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I4, 0x1, I4; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I4; 	mul.f32  V0, V6, V0; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I4, I2; 	mul.f32  V1, V8, V1; 	nop // compressed, part 1
+               	set_indx  I4, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I4; 	nop; 	nop
+               	nop; 	mov  b11111 I4, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I4, 0x1, I4; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I4; 	add.f32  V0, V0, V3; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I4, I2; 	nop; 	nop // compressed, part 1
+               	set_indx  I4, b00001, 0x0; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I2, I4; 	nop; 	nop
+               	nop; 	mov  b11111 I4, I2; 	add.f32  V0, V1, V0; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I4, 0x1, I4; 	nop; 	nop // compressed, part 1
+               	nop; 	mov  b11111 I2, I4; 	nop; 	nop // compressed, part 2
+               	nop; 	mov  b11111 I4, I2; 	nop; 	nop
+               	set_indx  I4, b00001, 0x0; 	nop; 	mul.f32  V0, V2, V0; 	nop
+               	nop; 	mov  b11111 I2, I4; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V9 // compressed, part 2
+               	nop; 	nop; 	nop; 	st_tnsr  0x2, I3, V0
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2

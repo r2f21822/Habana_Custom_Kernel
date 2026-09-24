@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcast_f16_to_i16_gaudi2.a cast_f16_to_i16_gaudi2_x86.o
+/usr/bin/ranlib libcast_f16_to_i16_gaudi2.a

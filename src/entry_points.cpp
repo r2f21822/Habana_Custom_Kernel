@@ -15,6 +15,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 ********************************************************************/
 
 #include "printf_test.hpp"
+#include "train_batch_f32.hpp"
 #include "batch_norm_f32.hpp"
 #include "cast_gaudi.hpp"
 #include "filter_fwd_2d_bf16.hpp"
@@ -108,6 +109,10 @@ tpc_lib_api::GlueCodeReturn GetKernelGuids( _IN_    tpc_lib_api::DeviceId       
            KLDivFwdF32Instance.GetKernelName(guids[GAUDI_KERNEL_KL_DIV_FWD_F32].name);
            KLDivAll KLDivBwdF32Instance(KLDivAll::bwd_f32);
            KLDivBwdF32Instance.GetKernelName(guids[GAUDI_KERNEL_KL_DIV_BWD_F32].name);
+          // KLDivAll KLDivBwdF32Instance(KLDivAll::bwd_f32);
+           //KLDivBwdF32Instance.GetKernelName(guids[GAUDI_KERNEL_KL_DIV_BWD_F32].name);
+           TrainBatchF32 trainBatchF32Instance;                                              
+           trainBatchF32Instance.GetKernelName(guids[GAUDI_KERNEL_TRAIN_BATCH_F32].name);   
         }
 
         if (kernelCount != nullptr)
@@ -383,6 +388,14 @@ InstantiateTpcKernel(_IN_  tpc_lib_api::HabanaKernelParams* params,
     {
         return KLDivBwdF32Instance.GetGcDefinitions(params,instance);
     }
+    
+    TrainBatchF32 trainBatchF32Instance;                        // <-- NOVO
+    trainBatchF32Instance.GetKernelName(kernelName);
+    if (strcmp(params->guid.name, kernelName) == 0)
+    {
+        return trainBatchF32Instance.GetGcDefinitions(params, instance);
+    }
+
     /////// --- Gaudi2 
     ///////////////////////////////
     KLDivAll KLDivFwdF32Instance2(KLDivAll::fwd_f32_gaudi2);

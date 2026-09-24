@@ -1,0 +1,585 @@
+
+.//kl_div_fwd_f32.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	ld_l mmio S2, 0x410; 	mov  SP2, S1; 	nop; 	nop
+               	ld_l mmio S3, 0x418; 	nop; 	nop; 	nop
+               	ld_l mmio S1, 0x420; 	nop; 	nop; 	nop
+               	ld_l mmio S4, 0x428; 	nop; 	nop; 	nop
+               	ld_l mmio S5, 0x430; 	nop; 	nop; 	nop
+               	mov.f32  V6, 0x0; 	nop; 	mov.f32  V1, 0x0; 	nop
+               	mov.f32  V4, 0x0; 	nop; 	mov.f32  V2, 0x0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_grt.i32  SP1, S5, 0x0; 	nop; 	nop
+               	nop; 	jmpr .LBB0_12, !SP2; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_23, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V6, 0x0; 	mov.i32  S6, 0x0; 	mov  V0, V_LANE_ID_32; 	set_indx  I2, b11111, 0x0
+               	mov.f32  V1, 0x0; 	nop; 	mov.f32  V2, 0x0; 	nop
+               	nop; 	nop; 	mov.f32  V4, 0x0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_l_v  0x0, V0
+
+.LBB0_3:
+               	set_indx  I2, b10000, S6; 	nop; 	nop; 	nop
+               	loop 0, S4, 1, <, .LBB0_11
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	set_indx  I2, b01000, S32; 	nop; 	nop; 	nop
+               	loop 0, S1, 1, <, .LBB0_10
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_5:
+               	set_indx  I2, b00100, S33; 	nop; 	nop; 	nop
+               	loop 0, S2, 64, <, .LBB0_9
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_6:
+               	ld_l_v  V0, 0x0; 	set_indx  I2, b00001, S34; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.i32  V5, V0, S34; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	cmp_geq.u32  VP1, V5, S2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop 0, S3, 4, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_7:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	set_indx  I2, b00010, S35; 	nop; 	st_l_v  0x100, V2
+               	ld_tnsr  V19, 0x1, I2; 	nop; 	mov.f32  V9, 0x3f000000; 	nop
+               	ld_tnsr  V5, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	ld_tnsr  V21, 0x1, I2; 	nop; 	nop; 	st_l_v  0x200, V6
+               	ld_tnsr  V6, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	mov.f32  V8, 0x3f000000; 	nop; 	mov.f32  V11, 0x3f000000; 	nop
+               	ld_tnsr  V22, 0x1, I2; 	nop; 	mac.f32  V9, V19, 0x3fb8aa3b; 	nop
+               	ld_tnsr  V7, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	mov  V13, V19; 	nop
+               	ld_tnsr  V24, 0x1, I2; 	nop; 	mov.f32  V12, 0x3f000000; 	nop
+               	mov.i32  V10, 0x0; 	nop; 	mov  V14, V21; 	nop
+               	nop; 	nop; 	mac.f32  V11, V21, 0x3fb8aa3b; 	nop
+               	mov.i32  V28, 0x0; 	nop; 	sub.f32  V0, V21, V6; 	nop
+               	mov  V16, V24; 	add.i32  S7, S35, 0x1; 	sub.f32  V23, V19, V5; 	nop
+               	ld_tnsr  V5, 0x0, I2; 	nop; 	mac.f32  V8, V24, 0x3fb8aa3b; 	nop
+               	mov  V6, V4; 	add.i32  b00010 I2, 0x1, I2; 	convert.f32 target_type=int32 rhne V25, V9; 	nop
+               	nop; 	nop; 	mac.f32  V12, V22, 0x3fb8aa3b; 	nop
+               	mov.i32  V35, 0x0; 	cmp_less.i32  SP3, S7, S3; 	convert.f32 target_type=int32 rhne V26, V11; 	nop
+               	mov.i32  V4, 0x0; 	nop; 	mov.i32  V38, 0x0; 	nop
+               	mov.i32  V30, 0x0; 	nop; 	nop; 	nop
+               	nop; 	nop; 	convert.f32 target_type=int32 rhne V29, V8; 	st_l_v  0x300, V0
+               	mov.i32  V20, 0x1; 	nop; 	convert.i32 target_type=fp32 rhne V8, V25; 	nop
+               	mov.i32  V31, 0x0; 	nop; 	convert.i32 target_type=fp32 rhne V9, V26; 	nop
+               	mov  V12, V22; 	add.i32  S7, S35, 0x2; 	convert.f32 target_type=int32 rhne V27, V12; 	nop
+               	mov  V7, V1; 	nop; 	sub.f32  V0, V22, V7; 	nop
+               	mov.i32  V36, 0x0; 	nop; 	convert.i32 target_type=fp32 rhne V15, V29; 	nop
+               	nop; 	nop; 	mac.f32 neg V13, V8, 0x3f318000; 	nop
+               	nop; 	cmp_less.i32  SP2, S7, S3; 	mac.f32 neg V14, V9, 0x3f318000; 	nop
+               	mov.i32  V3, 0x0; 	nop; 	convert.i32 target_type=fp32 rhne V11, V27; 	nop
+               	nop; 	nop; 	mac.f32 neg V16, V15, 0x3f318000; 	nop
+               	nop; 	nop; 	mac.f32 neg V13, V8, 0xb95e8083; 	nop
+               	nop; 	nop; 	mac.f32 neg V14, V9, 0xb95e8083; 	nop
+               	nop; 	nop; 	mac.f32 neg V12, V11, 0x3f318000; 	nop
+               	nop; 	nop; 	sub.f32  V0, V24, V5; 	st_l_v  0x400, V0
+               	nop; 	nop; 	mac.f32 neg V16, V15, 0xb95e8083; 	nop
+               	mov.i32  V8, 0x0; 	nop; 	mov.i32  V15, 0x0; 	nop
+               	nop; 	nop; 	mul.f32  V9, V13, 0x3fb8aa3b; 	nop
+               	nop; 	nop; 	mac.f32 neg V12, V11, 0xb95e8083; 	nop
+               	nop; 	nop; 	mul.f32  V11, V14, 0x3fb8aa3b; 	nop
+               	mov.i32  V14, 0x0; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mul.f32  V13, V16, 0x3fb8aa3b; 	nop
+               	nop; 	nop; 	nop; 	st_l_v  0x500, V0
+               	mov.i32  V2, 0x0; 	nop; 	cmp_geq.f32  VP2, V9, 0x0; 	nop
+               	nop; 	nop; 	mul.f32  V12, V12, 0x3fb8aa3b; 	nop
+               	mov.i32  V18, 0x0; 	nop; 	extract_exp.f32  V10, V9, VP2; 	nop
+               	nop; 	nop; 	and.i32  V28, V9, 0x7fffff, VP2; 	nop
+               	mov.i32  V37, 0x0; 	nop; 	cmp_geq.f32  VP3, V11, 0x0; 	nop
+               	mov.f32  V32, 0x0; 	nop; 	cmp_geq.f32  VP5, V13, 0x0; 	nop
+               	nop; 	nop; 	sub.i32 neg V16, V10, 0x0; 	nop
+               	mov.f32  V33, 0x7f800000; 	nop; 	extract_exp.f32  V8, V11, VP3; 	nop
+               	nop; 	nop; 	cmp_geq.f32  VP4, V12, 0x0; 	nop
+               	nop; 	nop; 	or.i32  V28, V28, 0x800000, VP2; 	nop
+               	nop; 	add.i32  S7, S35, 0x3; 	extract_exp.f32  V15, V13, VP5; 	nop
+               	nop; 	nop; 	min.i32  V10, V16, 0x18, VP2; 	nop
+               	nop; 	nop; 	extract_exp.f32  V14, V12, VP4; 	nop
+               	nop; 	nop; 	and.i32  V35, V11, 0x7fffff, VP3; 	nop
+               	nop; 	cmp_less.i32  SP1, S7, S3; 	sub.i32 neg V17, V8, 0x0; 	nop
+               	nop; 	nop; 	and.i32  V38, V12, 0x7fffff, VP4; 	nop
+               	nop; 	nop; 	shr.i32  V28, V28, V10, VP2; 	nop
+               	nop; 	nop; 	and.i32  V4, V13, 0x7fffff, VP5; 	nop
+               	nop; 	nop; 	sub.i32 neg V0, V14, 0x0; 	nop
+               	nop; 	nop; 	sub.i32 neg V1, V15, 0x0; 	nop
+               	nop; 	nop; 	min.i32  V8, V17, 0x18, VP3; 	nop
+               	nop; 	nop; 	or.i32  V28, V28, 0x3f800000, VP2; 	nop
+               	nop; 	nop; 	or.i32  V35, V35, 0x800000, VP3; 	nop
+               	nop; 	nop; 	add.f32  V28, V9, 0x40000000, !VP2; 	nop
+               	nop; 	nop; 	min.i32  V15, V1, 0x18, VP5; 	nop
+               	nop; 	nop; 	or.i32  V4, V4, 0x800000, VP5; 	nop
+               	nop; 	nop; 	min.i32  V14, V0, 0x18, VP4; 	nop
+               	nop; 	nop; 	or.i32  V38, V38, 0x800000, VP4; 	nop
+               	mov.i32  V1, 0x0; 	nop; 	shr.i32  V35, V35, V8, VP3; 	nop
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D8, V28, 0x11; 	nop // D8=[V8,V9]
+               	nop; 	nop; 	shr.i32  V4, V4, V15, VP5; 	nop
+               	nop; 	nop; 	and.i32  V30, V28, 0x7fffff, !VP2; 	nop
+               	nop; 	nop; 	shr.i32  V38, V38, V14, VP4; 	nop
+               	nop; 	nop; 	or.i32  V35, V35, 0x3f800000, VP3; 	nop
+               	lookup_2c   BV32 D16, V8, 0x100; 	nop; 	sub.f32  V28, V28, V9; 	nop // D16=[V16,V17]
+               	nop; 	nop; 	or.i32  V4, V4, 0x3f800000, VP5; 	nop
+               	nop; 	nop; 	add.f32  V35, V11, 0x40000000, !VP3; 	nop
+               	nop; 	nop; 	or.i32  V38, V38, 0x3f800000, VP4; 	nop
+               	nop; 	nop; 	add.f32  V4, V13, 0x40000000, !VP5; 	nop
+               	nop; 	nop; 	add.f32  V38, V12, 0x40000000, !VP4; 	nop
+               	lookup_1c   BV32 V0, V8, 0x100; 	nop; 	mac.f32  V16, V17, V28; 	nop
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D10, V35, 0x11; 	nop // D10=[V10,V11]
+               	nop; 	nop; 	and.i32  V36, V35, 0x7fffff, !VP3; 	nop
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D14, V4, 0x11; 	nop // D14=[V14,V15]
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D12, V38, 0x11; 	nop // D12=[V12,V13]
+               	nop; 	nop; 	and.i32  V3, V4, 0x7fffff, !VP5; 	nop
+               	lookup_2c   BV32 D8, V10, 0x100; 	nop; 	sub.f32  V35, V35, V11; 	nop // D8=[V8,V9]
+               	nop; 	nop; 	mac.f32  V0, V16, V28; 	nop
+               	lookup_2c   BV32 D16, V12, 0x100; 	nop; 	sub.f32  V15, V4, V15; 	nop // D16=[V16,V17]
+               	nop; 	nop; 	sub.f32  V13, V38, V13; 	nop
+               	nop; 	nop; 	and.i32  V1, V38, 0x7fffff, !VP4; 	nop
+               	nop; 	nop; 	sel_eq.i32      V31, V30, 0x0, V31, V20, !VP2; 	nop
+               	lookup_1c   BV32 V4, V10, 0x100; 	nop; 	mac.f32  V8, V9, V35; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_eq.i32      V18, V3, 0x0, V18, V20, !VP5; 	nop
+               	lookup_2c   BV32 D10, V14, 0x100; 	nop; 	mac.f32  V16, V17, V13; 	nop // D10=[V10,V11]
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_eq.i32      V2, V1, 0x0, V2, V20, !VP4; 	nop
+               	lookup_1c   BV32 V12, V12, 0x100; 	nop; 	sub.i32  V1, V25, V31; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V17, V0; 	nop
+               	nop; 	nop; 	sel_eq.i32      V37, V36, 0x0, V37, V20, !VP3; 	nop
+               	lookup_1c   BV32 V14, V14, 0x100; 	nop; 	mac.f32  V4, V8, V35; 	nop
+               	nop; 	nop; 	mac.f32  V10, V11, V15; 	nop
+               	nop; 	nop; 	sub.i32  V9, V29, V18; 	nop
+               	nop; 	nop; 	add.i32  V1, V1, V17; 	nop
+               	nop; 	nop; 	mac.f32  V12, V16, V13; 	nop
+               	nop; 	nop; 	sub.i32  V3, V26, V37; 	nop
+               	nop; 	nop; 	sub.i32  V2, V27, V2; 	nop
+               	nop; 	nop; 	and.i32  V34, V19, 0x7fffffff; 	nop
+               	nop; 	nop; 	mac.f32  V14, V10, V15; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V0, V1, V0, V0; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V1, V4; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V8, V12; 	nop
+               	nop; 	nop; 	and.i32  V39, V21, 0x7fffffff; 	nop
+               	nop; 	nop; 	and.i32  V5, V22, 0x7fffffff; 	nop
+               	nop; 	nop; 	sel_leq.f32     V0, V19, 0xc2aeac50, V32, V0; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V10, V14; 	nop
+               	nop; 	nop; 	add.i32  V1, V3, V1; 	nop
+               	nop; 	nop; 	add.i32  V2, V2, V8; 	nop
+               	nop; 	nop; 	and.i32  V18, V24, 0x7fffffff; 	nop
+               	nop; 	nop; 	sel_geq.f32     V0, V19, 0x42b17218, V33, V0; 	nop
+               	nop; 	nop; 	add.i32  V3, V9, V10; 	nop
+               	mov  V4, V6; 	nop; 	form_fp_num.f32 exp_is_num V1, V1, V4, V4; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V2, V2, V12, V12; 	nop
+               	nop; 	nop; 	sel_grt.u32     V0, V34, 0x7f800000, V19, V0; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V3, V3, V14, V14; 	nop
+               	nop; 	nop; 	sel_leq.f32     V1, V21, 0xc2aeac50, V32, V1; 	nop
+               	nop; 	nop; 	sel_leq.f32     V2, V22, 0xc2aeac50, V32, V2; 	nop
+               	nop; 	nop; 	mul.f32  V0, V23, V0; 	nop
+               	nop; 	nop; 	sel_leq.f32     V3, V24, 0xc2aeac50, V32, V3; 	nop
+               	nop; 	nop; 	sel_geq.f32     V1, V21, 0x42b17218, V33, V1; 	nop
+               	nop; 	nop; 	mov.f32  V0, 0x0, VP1; 	nop
+               	nop; 	nop; 	sel_geq.f32     V2, V22, 0x42b17218, V33, V2; 	nop
+               	nop; 	nop; 	sel_geq.f32     V3, V24, 0x42b17218, V33, V3; 	nop
+               	nop; 	nop; 	sel_grt.u32     V1, V39, 0x7f800000, V21, V1; 	nop
+               	nop; 	nop; 	add.f32  V4, V4, V0; 	nop
+               	nop; 	nop; 	sel_grt.u32     V0, V5, 0x7f800000, V22, V2; 	nop
+               	nop; 	nop; 	sel_grt.u32     V2, V18, 0x7f800000, V24, V3; 	nop
+               	ld_l_v  V3, 0x300; 	nop; 	nop; 	nop
+               	ld_l_v  V6, 0x200; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_l_v  V3, 0x400; 	nop; 	mul.f32  V1, V3, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V1, 0x0, VP1; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_l_v  V3, 0x500; 	nop; 	mul.f32  V0, V3, V0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V0, 0x0, VP1; 	nop; 	add.f32  V7, V7, V1, SP3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_l_v  V2, 0x100; 	nop; 	mul.f32  V5, V3, V2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov  V1, V7; 	nop; 	mov.f32  V5, 0x0, VP1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V2, V2, V0, SP2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V6, V6, V5, SP1; 	nop
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_10:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_11:
+               	nop; 	add.i32  S6, S6, 0x1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_eq.i32  SP1, S6, S5; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_3, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_23; 	nop; 	nop
+
+.LBB0_12:
+               	nop; 	jmpr .LBB0_23, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V6, 0x0; 	mov.i32  S6, 0x0; 	mov  V0, V_LANE_ID_32; 	set_indx  I2, b11111, 0x0
+               	mov.f32  V1, 0x0; 	nop; 	mov.f32  V2, 0x0; 	nop
+               	nop; 	nop; 	mov.f32  V4, 0x0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_l_v  0x0, V0
+
+.LBB0_14:
+               	set_indx  I2, b10000, S6; 	nop; 	nop; 	nop
+               	loop 0, S4, 1, <, .LBB0_22
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_15:
+               	set_indx  I2, b01000, S32; 	nop; 	nop; 	nop
+               	loop 0, S1, 1, <, .LBB0_21
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_16:
+               	set_indx  I2, b00100, S33; 	nop; 	nop; 	nop
+               	loop 0, S2, 64, <, .LBB0_20
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_17:
+               	ld_l_v  V0, 0x0; 	set_indx  I2, b00001, S34; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.i32  V0, V0, S34; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	cmp_geq.u32  VP1, V0, S2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop 0, S3, 4, <, .LBB0_19
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_18:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov  V8, V1; 	set_indx  I2, b00010, S35; 	nop; 	st_l_v  0x100, V2
+               	ld_tnsr  V5, 0x0, I2; 	nop; 	nop; 	st_l_v  0x200, V6
+               	ld_tnsr  V3, 0x1, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	mov.f32  V0, 0x3f800000; 	nop; 	nop; 	nop
+               	ld_tnsr  V7, 0x1, I2; 	nop; 	mov.f32  V2, 0xbdebd1b8; 	nop
+               	mov  V6, V4; 	nop; 	mov.f32  V13, 0x3d9021bb; 	nop
+               	mov.f32  V34, 0xbdebd1b8; 	nop; 	mov.f32  V1, 0xbdebd1b8; 	nop
+               	mov.f32  V24, 0x3def251a; 	nop; 	mov.f32  V36, 0x3def251a; 	nop
+               	nop; 	nop; 	sel_leq.f32     V11, V3, 0x0, V0, V3; 	nop
+               	ld_tnsr  V5, 0x0, I2; 	nop; 	nop; 	st_l_v  0x500, V5
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.f32     V10, V7, 0x0, V0, V7; 	nop
+               	ld_tnsr  V9, 0x1, I2; 	nop; 	mov.f32  V38, 0xbdfe5d4f; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V3, 0x7e, V11, V11; 	nop
+               	mov.f32  V35, 0x3def251a; 	nop; 	extract_exp.f32  V30, V11; 	nop
+               	mov.f32  V27, 0xbdfe5d4f; 	nop; 	fclass.f32  V33, V11; 	nop
+               	mov.f32  V29, 0x3e11e9bf; 	nop; 	nop; 	nop
+               	ld_tnsr  V5, 0x0, I2; 	nop; 	nop; 	st_l_v  0x300, V5
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.f32     V9, V9, 0x0, V0, V9; 	nop
+               	ld_tnsr  V12, 0x1, I2; 	nop; 	add.f32  V16, V3, 0xbf3504f3; 	nop
+               	mov.f32  V26, 0xbdfe5d4f; 	nop; 	nop; 	nop
+               	mov.f32  V32, 0xbe2aae50; 	nop; 	mov.f32  V31, 0xbe2aae50; 	nop
+               	mov.f32  V28, 0x3e11e9bf; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V14, 0x7e, V9, V9; 	nop
+               	nop; 	nop; 	sel_leq.f32     V7, V12, 0x0, V0, V12; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V12, 0x7e, V10, V10; 	nop
+               	ld_tnsr  V17, 0x0, I2; 	nop; 	shr.i32  V16, V16, 0x1f; 	nop
+               	mov.f32  V0, 0x3def251a; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V19, V14, 0xbf3504f3; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V15, 0x7e, V7, V7; 	nop
+               	nop; 	nop; 	add.f32  V18, V12, 0xbf3504f3; 	nop
+               	mov.f32  V4, 0xbe7ffffc; 	nop; 	convert.i32 target_type=fp32 rhne V21, V16; 	nop
+               	nop; 	nop; 	sub.i32  V16, V30, V16; 	st_l_v  0x400, V5
+               	nop; 	nop; 	shr.i32  V19, V19, 0x1f; 	nop
+               	nop; 	nop; 	add.f32  V20, V15, 0xbf3504f3; 	nop
+               	nop; 	nop; 	shr.i32  V18, V18, 0x1f; 	nop
+               	mov.f32  V5, 0x3eaaaaaa; 	nop; 	mul.f32  V21, V21, V3; 	nop
+               	mov.f32  V30, 0x3eaaaaaa; 	nop; 	convert.i32 target_type=fp32 rhne V23, V19; 	nop
+               	nop; 	nop; 	shr.i32  V20, V20, 0x1f; 	nop
+               	nop; 	add.i32  S7, S35, 0x1; 	convert.i32 target_type=fp32 rhne V22, V18; 	nop
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	add.i32  V16, V16, 0x1; 	nop
+               	nop; 	nop; 	mul.f32  V23, V23, V14; 	nop
+               	nop; 	nop; 	convert.i32 target_type=fp32 rhne V25, V20; 	nop
+               	nop; 	cmp_less.i32  SP3, S7, S3; 	mul.f32  V22, V22, V12; 	nop
+               	nop; 	nop; 	add.f32  V21, V21, 0xbf800000; 	nop
+               	nop; 	add.i32  S7, S35, 0x2; 	convert.i32 target_type=fp32 rhne V16, V16; 	nop
+               	nop; 	nop; 	mul.f32  V25, V25, V15; 	nop
+               	nop; 	nop; 	add.f32  V23, V23, 0xbf800000; 	nop
+               	mov.f32  V21, 0xbdebd1b8; 	nop; 	add.f32  V3, V3, V21; 	nop
+               	nop; 	cmp_less.i32  SP2, S7, S3; 	add.f32  V22, V22, 0xbf800000; 	nop
+               	nop; 	add.i32  S7, S35, 0x3; 	nop; 	nop
+               	mov.f32  V23, 0x3e4cceac; 	nop; 	add.f32  V14, V14, V23; 	nop
+               	nop; 	nop; 	add.f32  V25, V25, 0xbf800000; 	nop
+               	nop; 	nop; 	mac.f32  V2, V13, V3; 	nop
+               	mov.f32  V22, 0x3e4cceac; 	cmp_less.i32  SP1, S7, S3; 	add.f32  V12, V12, V22; 	nop
+               	nop; 	nop; 	mul.f32  V37, V3, V3; 	nop
+               	nop; 	nop; 	mac.f32  V21, V13, V14; 	nop
+               	mov.f32  V25, 0xbe7ffffc; 	nop; 	add.f32  V15, V15, V25; 	nop
+               	nop; 	nop; 	mac.f32  V34, V13, V12; 	nop
+               	nop; 	nop; 	mac.f32  V24, V2, V3; 	nop
+               	nop; 	nop; 	mul.f32  V2, V12, V12; 	nop
+               	mov.f32  V13, 0xbe7ffffc; 	nop; 	mac.f32  V1, V13, V15; 	nop
+               	nop; 	nop; 	mul.f32  V39, V37, 0xbf000000; 	nop
+               	nop; 	nop; 	mac.f32  V36, V21, V14; 	nop
+               	nop; 	nop; 	mul.f32  V21, V3, 0x3ee2a8ed; 	nop
+               	mov.f32  V34, 0xbdfe5d4f; 	nop; 	mac.f32  V35, V34, V12; 	nop
+               	mov.f32  V24, 0x3e11e9bf; 	nop; 	mac.f32  V27, V24, V3; 	nop
+               	mov.f32  V1, 0x3e11e9bf; 	nop; 	mac.f32  V0, V1, V15; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mac.f32  V38, V36, V14; 	nop
+               	nop; 	nop; 	extract_exp.f32  V36, V10; 	nop
+               	mov.f32  V35, 0xbe2aae50; 	nop; 	mac.f32  V34, V35, V12; 	nop
+               	mov.f32  V27, 0xbe2aae50; 	nop; 	mac.f32  V29, V27, V3; 	nop
+               	mov.f32  V0, 0x3e4cceac; 	nop; 	mac.f32  V26, V0, V15; 	nop
+               	nop; 	nop; 	sub.i32  V18, V36, V18; 	nop
+               	mov.f32  V38, 0x3e4cceac; 	nop; 	mac.f32  V24, V38, V14; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V34, 0x3eaaaaaa; 	nop; 	mac.f32  V1, V34, V12; 	nop
+               	mov.f32  V29, 0x3eaaaaaa; 	nop; 	mac.f32  V32, V29, V3; 	nop
+               	nop; 	nop; 	add.i32  V18, V18, 0x1; 	nop
+               	mov.f32  V26, 0xbe7ffffc; 	nop; 	mac.f32  V28, V26, V15; 	nop
+               	nop; 	nop; 	mac.f32  V27, V24, V14; 	nop
+               	nop; 	nop; 	mul.f32  V24, V2, 0xbf000000; 	nop
+               	nop; 	nop; 	mac.f32  V35, V1, V12; 	nop
+               	nop; 	nop; 	mul.f32  V1, V12, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	mac.f32  V23, V32, V3; 	nop
+               	nop; 	nop; 	convert.i32 target_type=fp32 rhne V18, V18; 	nop
+               	nop; 	nop; 	mac.f32  V31, V28, V15; 	nop
+               	nop; 	nop; 	mac.f32  V38, V27, V14; 	nop
+               	nop; 	nop; 	extract_exp.f32  V28, V9; 	nop
+               	nop; 	nop; 	mac.f32  V0, V35, V12; 	nop
+               	nop; 	nop; 	fclass.f32  V27, V10; 	nop
+               	nop; 	nop; 	mac.f32  V13, V23, V3; 	nop
+               	nop; 	nop; 	mul.f32  V23, V15, V15; 	nop
+               	nop; 	nop; 	mac.f32  V22, V31, V15; 	nop
+               	nop; 	nop; 	mac.f32  V26, V38, V14; 	nop
+               	nop; 	nop; 	sub.i32  V19, V28, V19; 	nop
+               	nop; 	nop; 	mac.f32  V4, V0, V12; 	nop
+               	nop; 	nop; 	mul.f32  V0, V14, V14; 	nop
+               	nop; 	nop; 	mac.f32  V5, V13, V3; 	nop
+               	nop; 	nop; 	mul.f32  V28, V15, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	mac.f32  V25, V22, V15; 	nop
+               	nop; 	nop; 	mac.f32  V29, V26, V14; 	nop
+               	nop; 	nop; 	mul.f32  V22, V23, 0xbf000000; 	nop
+               	nop; 	nop; 	mac.f32  V34, V4, V12; 	nop
+               	nop; 	nop; 	mul.f32  V4, V0, 0xbf000000; 	nop
+               	nop; 	nop; 	mul.f32  V5, V37, V5; 	nop
+               	nop; 	nop; 	add.i32  V13, V19, 0x1; 	nop
+               	nop; 	nop; 	mac.f32  V30, V25, V15; 	nop
+               	nop; 	nop; 	mul.f32  V0, V0, V29; 	nop
+               	nop; 	nop; 	extract_exp.f32  V26, V7; 	nop
+               	nop; 	nop; 	mul.f32  V2, V2, V34; 	nop
+               	nop; 	nop; 	mul.f32  V19, V14, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	mul.f32  V5, V3, V5; 	nop
+               	nop; 	nop; 	convert.i32 target_type=fp32 rhne V13, V13; 	nop
+               	nop; 	nop; 	mul.f32  V23, V23, V30; 	nop
+               	nop; 	nop; 	mul.f32  V0, V14, V0; 	nop
+               	nop; 	nop; 	sub.i32  V20, V26, V20; 	nop
+               	nop; 	nop; 	mul.f32  V2, V12, V2; 	nop
+               	nop; 	nop; 	fclass.f32  V25, V9; 	nop
+               	nop; 	nop; 	add.f32  V5, V39, V5; 	nop
+               	nop; 	nop; 	fclass.f32  V29, V7; 	nop
+               	nop; 	nop; 	mul.f32  V23, V15, V23; 	nop
+               	nop; 	nop; 	add.f32  V0, V4, V0; 	nop
+               	nop; 	nop; 	add.i32  V20, V20, 0x1; 	nop
+               	nop; 	nop; 	mul.f32  V4, V5, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	add.f32  V2, V24, V2; 	nop
+               	nop; 	nop; 	mul.f32  V24, V0, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	add.f32  V22, V22, V23; 	nop
+               	nop; 	nop; 	convert.i32 target_type=fp32 rhne V20, V20; 	nop
+               	nop; 	nop; 	mul.f32  V23, V2, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	add.f32  V4, V21, V4; 	nop
+               	nop; 	nop; 	mul.f32  V26, V22, 0x3ee2a8ed; 	nop
+               	nop; 	nop; 	add.f32  V19, V19, V24; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V4, V5, V4; 	nop
+               	nop; 	nop; 	add.f32  V1, V1, V23; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V19; 	nop
+               	nop; 	nop; 	add.f32  V5, V28, V26; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V1, V2, V1; 	nop
+               	mov  V4, V6; 	nop; 	add.f32  V2, V3, V4; 	nop
+               	nop; 	nop; 	add.f32  V0, V14, V0; 	nop
+               	ld_l_v  V5, 0x500; 	nop; 	add.f32  V3, V22, V5; 	nop
+               	nop; 	nop; 	add.f32  V1, V12, V1; 	nop
+               	nop; 	nop; 	add.f32  V2, V2, V16; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V13; 	nop
+               	nop; 	nop; 	add.f32  V3, V15, V3; 	nop
+               	nop; 	nop; 	add.f32  V1, V1, V18; 	nop
+               	nop; 	nop; 	mul.f32  V2, V2, 0x3f317218; 	nop
+               	nop; 	nop; 	mul.f32  V0, V0, 0x3f317218; 	nop
+               	nop; 	nop; 	calc_fp_special.f32 func=log V2, V33, V33; 	nop
+               	nop; 	nop; 	add.f32  V3, V3, V20; 	nop
+               	nop; 	nop; 	mul.f32  V1, V1, 0x3f317218; 	nop
+               	nop; 	nop; 	calc_fp_special.f32 func=log V0, V25, V25; 	nop
+               	ld_l_v  V5, 0x300; 	nop; 	sub.f32  V2, V2, V5; 	nop
+               	nop; 	nop; 	calc_fp_special.f32 func=log V1, V27, V27; 	nop
+               	nop; 	nop; 	mul.f32  V3, V3, 0x3f317218; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	calc_fp_special.f32 func=log V3, V29, V29; 	nop
+               	nop; 	nop; 	mul.f32  V2, V11, V2; 	nop
+               	ld_l_v  V5, 0x400; 	nop; 	sub.f32  V1, V1, V5; 	nop
+               	mov.f32  V2, 0x0, VP1; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sub.f32  V3, V3, V17; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sub.f32  V0, V0, V5; 	nop
+               	nop; 	nop; 	mul.f32  V1, V10, V1; 	nop
+               	ld_l_v  V2, 0x100; 	nop; 	add.f32  V4, V4, V2; 	nop
+               	mov.f32  V1, 0x0, VP1; 	nop; 	mul.f32  V5, V7, V3; 	nop
+               	nop; 	nop; 	mul.f32  V6, V9, V0; 	nop
+               	mov.f32  V5, 0x0, VP1; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov.f32  V6, 0x0, VP1; 	nop
+               	nop; 	nop; 	add.f32  V8, V8, V1, SP3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V2, V2, V6, SP2; 	nop
+               	ld_l_v  V6, 0x200; 	nop; 	mov  V1, V8; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V6, V6, V5, SP1; 	nop
+
+.LBB0_19:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_20:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_21:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_22:
+               	nop; 	add.i32  S6, S6, 0x1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_eq.i32  SP1, S6, S5; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_14, !SP1; 	nop; 	nop
+
+.LBB0_23:
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b11111, 0x0; 	nop; 	add.f32  V0, V1, V4; 	nop
+               	nop; 	nop; 	mov  V1, V_LANE_ID_32; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V2, V0; 	nop
+               	lookup_1c   BV32 V4, V1, 0x11a; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	lookup_2c   BV32 D2, V1, 0x11a; 	nop; 	nop; 	nop // D2=[V2,V3]
+               	nop; 	nop; 	add.f32  V0, V6, V0; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov_dg.all sdg0=1 sdg1=0 sdg2=3 sdg3=2 weg0=3 weg1=3 weg2=3 weg3=3 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov_dg.all sdg0=2 sdg1=3 sdg2=0 sdg3=1 weg0=3 weg1=3 weg2=3 weg3=3 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov_g g_en=0b11 dg_en=0b1111 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	shuffle.f32  V1, V0, V4; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	shuffle.f32  V1, V0, V2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	shuffle.f32  V1, V0, V3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mul.f32  V0, V0, S0; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x2, I2, V0
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

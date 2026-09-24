@@ -1,0 +1,2 @@
+/usr/bin/ar qc librede.a rede_x86.o
+/usr/bin/ranlib librede.a

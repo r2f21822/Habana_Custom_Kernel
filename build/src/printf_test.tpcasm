@@ -1,0 +1,197 @@
+
+.//printf_test.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	mov.i32  V0, 0x0; 	set_indx  I2, b11111, 0x0; 	mov.i32  V3, S0; 	cache_invalidate 
+               	mov.i32  V2, 0xcdcdcdcd; 	mov  b11111 I3, I2; 	mov.f32  V7, S1; 	cache_flush 
+               	mov.i32  V4, 0x74736554; 	nop; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	sub.i32 neg S1, S2, 0x0; 	nop; 	set_indx  I4, b11111, 0x0
+               	mov.i32  V5, 0x72747320; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov  b11111 I3, I2; 	nop; 	mov.i32  V6, 0x21676e69; 	st_tnsr  0xf, I2, V2
+               	mov.i32  V10, 0xa; 	nop; 	nop; 	nop
+               	ld_tnsr  V1, 0x0, I4; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	mov.i32  V13, 0x73692065; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V14, 0x64682520; 	mov  b11111 I3, I2; 	nop; 	nop
+               	mov.i32  V15, 0x616f6c66; 	nop; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	mov.i32  V12, 0x61762074; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V0, 0xffffffff; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	mov.i32  V11, 0x2065756c; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V9, 0x6e692065; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	mov.i32  V8, 0x63657620; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V4, 0x20746e69; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V5, 0x20726f74; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V6, 0x756c6176; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V10
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V3, 0xa66; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	mov.i32  V4, 0x25207369; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V13
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V14
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V10
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V7
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V15
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V12
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V11
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V0
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V2
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, S1; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V1
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V6
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V9
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V8
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V5
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V4
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	st_tnsr  0xf, I2, V3
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	mov  b11111 I3, I2; 	nop; 	nop
+               	set_indx  I3, b00001, 0x0; 	nop; 	nop; 	nop
+               	nop; 	mov  b11111 I2, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0xf, I2, V0
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

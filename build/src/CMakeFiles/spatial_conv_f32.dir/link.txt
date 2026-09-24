@@ -1,0 +1,2 @@
+/usr/bin/ar qc libspatial_conv_f32.a spatial_conv_f32_x86.o
+/usr/bin/ranlib libspatial_conv_f32.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgather_fwd_dim1_i32.a gather_fwd_dim1_i32_x86.o
+/usr/bin/ranlib libgather_fwd_dim1_i32.a

@@ -1,0 +1,209 @@
+
+.//sparse_lengths_sum_bf16_2D_f32_embed.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	mov.i32  S0, 0x0; 	mov_irf_dim  0x1 S3, I0; 	nop; 	cache_invalidate 
+               	set_indx  I2, b11111, 0x0; 	add.i32  b11111 I4, I1, I0; 	nop; 	cache_flush 
+               	ld_l mmio S2, 0x410; 	mov_irf_dim  0x0 S4, I0; 	nop; 	nop
+               	set_indx  I3, b11111, 0x0; 	mov_irf_dim  0x0 S5, I4; 	nop; 	nop
+               	nop; 	shl.i32  S1, S3, 0x1; 	nop; 	nop
+               	nop; 	cmp_less.i32  SP1, S3, 0x1; 	nop; 	nop
+               	nop; 	shl.i32  S3, S4, 0x7; 	nop; 	nop
+               	nop; 	shl.i32  S4, S5, 0x7; 	nop; 	nop
+               	nop; 	max.i32  S5, S1, 0x1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop 0, S5, 1, <, .LBB0_2, !SP1
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_1:
+               	set_indx  I3, b00001, S32; 	nop; 	nop; 	nop
+               	mov  b11111 I2, I3; 	nop; 	nop; 	gen_addr  AD0, 0x2, I3
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_g  S5, AD0; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	add.i32  S0, S5, S0; 	nop; 	nop
+
+.LBB0_2:
+               	nop; 	add.i32  S2, S2, 0xfffffff8; 	nop; 	nop
+               	set_indx  I3, b11111, 0x0; 	mov_irf_dim  0x1 S5, I4; 	nop; 	nop
+               	mov  b11111 I4, I3; 	mov  b11111 I5, I3; 	nop; 	nop
+               	mov  b11111 I7, I3; 	mov  b11111 I8, I3; 	nop; 	nop
+               	set_indx  I6, b00001, S2; 	set_indx  I6, b11110, 0x0; 	nop; 	nop
+               	mov  b11111 I9, I3; 	shl.i32  S2, S5, 0x1; 	nop; 	nop
+               	mov  b11111 I10, I3; 	mov  b11111 I11, I6; 	nop; 	nop
+               	loop S3, S4, 128, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_3:
+               	set_indx  I9, b00001, S32; 	set_indx  I3, b00001, S32; 	nop; 	set_indx  I10, b00001, S32
+               	set_indx  I4, b00001, S32; 	mov.f32  S3, S0; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S1, S2, 2, <, .LBB0_7
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	set_indx  I2, b00001, S33; 	set_indx  I5, b00001, S3; 	mov  V19, V6; 	nop
+               	gen_addr  AD1, 0x1, I5; 	or.i32  S4, S33, 0x1; 	mov  V20, V7; 	gen_addr  AD0, 0x2, I2
+               	nop; 	nop; 	mov.i8  V16, 0x80; 	nop
+               	mov.i8  V18, 0x82; 	nop; 	nop; 	nop
+               	mov.f32  V9, 0x0; 	nop; 	mov.f32  V8, 0x0; 	nop
+               	mov.f32  V11, 0x0; 	set_indx  I8, b00001, S4; 	mov.f32  V10, 0x0; 	nop
+               	nop; 	nop; 	nop; 	gen_addr  AD2, 0x2, I8
+               	nop; 	nop; 	nop; 	nop
+               	ld_g  S6, AD0; 	nop; 	nop; 	nop
+               	ld_g  S5, AD1; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	add.i32  S3, S6, S3; 	nop; 	nop
+               	set_indx  I6, b00010, S5; 	set_indx  I3, b00010, S5; 	nop; 	nop
+               	ld_g  S5, AD2; 	nop; 	nop; 	nop
+               	ld_tnsr  V6, 0x0, I3; 	nop; 	nop; 	nop
+               	ld_tnsr_low  V12, 0x0, I6; 	set_indx  I7, b00001, S3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	gen_addr  AD3, 0x1, I7
+               	nop; 	max.i32  S7, S5, S6; 	nop; 	nop
+               	nop; 	nop; 	unpack.bf16 source_group=0 element_stride=2 group_half=0 V19, V6; 	nop
+               	mov  V14, V12; 	nop; 	unpack.bf16 source_group=1 element_stride=2 group_half=0 V5, V6; 	nop
+               	nop; 	nop; 	shuffle.f32  V12, V12, V18; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_g  S8, AD3; 	nop; 	shuffle.f32  V14, V14, V16; 	nop
+               	nop; 	nop; 	mov  V6, V19; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V6, V5, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	set_indx  I11, b00010, S8; 	set_indx  I4, b00010, S8; 	mov_dg src=1 dst=2 wr_lg=0x1 wr_ug=0x1 V6, V19, 0xffffffff; 	nop
+               	ld_tnsr  V7, 0x0, I4; 	nop; 	mov_dg src=1 dst=3 wr_lg=0x1 wr_ug=0x1 V6, V5, 0xffffffff; 	nop
+               	ld_tnsr_low  V13, 0x0, I11; 	nop; 	mov_dg src=2 dst=0 wr_lg=0x1 wr_ug=0x1 V5, V19, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	unpack.bf16 source_group=0 element_stride=2 group_half=0 V20, V7; 	nop
+               	mov  V15, V13; 	nop; 	unpack.bf16 source_group=1 element_stride=2 group_half=0 V4, V7; 	nop
+               	mov  V17, V6; 	nop; 	shuffle.f32  V13, V13, V18; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=1 wr_lg=0x1 wr_ug=0x1 V5, V5, 0xffffffff; 	nop
+               	mov  V7, V20; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	nop; 	nop; 	shuffle.f32  V15, V15, V16; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V7, V4, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=2 wr_lg=0x1 wr_ug=0x1 V7, V20, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=3 dst=2 wr_lg=0x1 wr_ug=0x1 V5, V19, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=3 wr_lg=0x1 wr_ug=0x1 V7, V4, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=0 wr_lg=0x1 wr_ug=0x1 V4, V20, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	mov  V19, V5; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	mov  V16, V7; 	nop; 	mov  V18, V5; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=1 wr_lg=0x1 wr_ug=0x1 V4, V4, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=3 dst=2 wr_lg=0x1 wr_ug=0x1 V4, V20, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov  V20, V4; 	nop; 	mov  V21, V4; 	nop
+               	loop 1, S7, 1, <, .LBB0_6
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+
+.LBB0_5:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	add.i32  b00001 I5, 0x1, I5; 	convert.bf16 all_lanes target_type=fp32 rhne D18, V19; 	nop // D18=[V18,V19]
+               	mov  V19, V12; 	add.i32  b00001 I7, 0x1, I7; 	convert.bf16 all_lanes target_type=fp32 rhne D20, V20; 	gen_addr  AD0, 0x1, I5 // D20=[V20,V21]
+               	mov.i8  V21, 0x80; 	cmp_leq.i32  SP1, S34, S6; 	convert.bf16 all_lanes target_type=fp32 rhne D22, V17; 	gen_addr  AD1, 0x1, I7 // D22=[V22,V23]
+               	mov  V23, V13; 	cmp_leq.i32  SP2, S34, S5; 	convert.bf16 all_lanes target_type=fp32 rhne D16, V16; 	nop // D16=[V16,V17]
+               	mov.i8  V24, 0x82; 	nop; 	mac.f32  V12, V18, V14; 	nop
+               	nop; 	nop; 	mac.f32  V13, V20, V15; 	nop
+               	nop; 	nop; 	mac.f32  V19, V22, V14; 	nop
+               	nop; 	nop; 	mac.f32  V23, V16, V15; 	nop
+               	ld_g  S7, AD0; 	nop; 	nop; 	nop
+               	ld_g  S8, AD1; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V10, V10, V12, SP1; 	nop
+               	nop; 	nop; 	add.f32  V8, V8, V13, SP2; 	nop
+               	set_indx  I6, b00010, S7; 	set_indx  I3, b00010, S7; 	nop; 	nop
+               	ld_tnsr  V16, 0x0, I3; 	nop; 	add.f32  V11, V11, V19, SP1; 	nop
+               	ld_tnsr_low  V12, 0x0, I6; 	set_indx  I11, b00010, S8; 	nop; 	set_indx  I4, b00010, S8
+               	ld_tnsr_low  V13, 0x0, I11; 	nop; 	add.f32  V9, V9, V23, SP2; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_tnsr  V18, 0x0, I4; 	nop; 	unpack.bf16 source_group=0 element_stride=2 group_half=0 V2, V16; 	nop
+               	mov  V14, V12; 	nop; 	unpack.bf16 source_group=1 element_stride=2 group_half=0 V3, V16; 	nop
+               	mov  V15, V13; 	nop; 	shuffle.f32  V12, V12, V24; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	unpack.bf16 source_group=0 element_stride=2 group_half=0 V0, V18; 	nop
+               	mov  V17, V2; 	nop; 	unpack.bf16 source_group=1 element_stride=2 group_half=0 V1, V18; 	nop
+               	nop; 	nop; 	shuffle.f32  V13, V13, V24; 	nop
+               	nop; 	nop; 	shuffle.f32  V14, V14, V21; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V17, V3, 0xffffffff; 	nop
+               	mov  V16, V0; 	nop; 	shuffle.f32  V15, V15, V21; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=2 wr_lg=0x1 wr_ug=0x1 V17, V2, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V16, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=2 wr_lg=0x1 wr_ug=0x1 V16, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=1 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=3 wr_lg=0x1 wr_ug=0x1 V17, V3, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=0 wr_lg=0x1 wr_ug=0x1 V3, V2, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=1 dst=3 wr_lg=0x1 wr_ug=0x1 V16, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=0 wr_lg=0x1 wr_ug=0x1 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=2 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=1 wr_lg=0x1 wr_ug=0x1 V3, V3, 0xffffffff; 	nop
+               	mov  V2, V17; 	nop; 	mov_dg src=3 dst=2 wr_lg=0x1 wr_ug=0x1 V3, V2, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=2 dst=1 wr_lg=0x1 wr_ug=0x1 V1, V1, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V14, V14, 0xffffffff; 	nop
+               	mov  V0, V16; 	nop; 	mov_dg src=3 dst=2 wr_lg=0x1 wr_ug=0x1 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V15, V15, 0xffffffff; 	nop
+               	nop; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V12, V12, 0xffffffff; 	nop
+               	mov  V19, V3; 	nop; 	mov_dg src=0 dst=3 wr_lg=0x1 wr_ug=0x1 V13, V13, 0xffffffff; 	nop
+               	nop; 	nop; 	mov  V18, V3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov  V20, V1; 	nop; 	mov  V21, V1; 	nop
+
+.LBB0_6:
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I9, b00010, S33; 	cmp_geq.i32  SP1, S6, S5; 	convert.bf16 all_lanes target_type=fp32 rhne D18, V18; 	set_indx  I10, b00010, S4 // D18=[V18,V19]
+               	mov  V19, V12; 	cmp_geq.i32  SP2, S5, S6; 	convert.bf16 all_lanes target_type=fp32 rhne D22, V17; 	nop // D22=[V22,V23]
+               	nop; 	add.i32  S3, S3, S5; 	convert.bf16 all_lanes target_type=fp32 rhne D16, V16; 	nop // D16=[V16,V17]
+               	mov  V17, V13; 	nop; 	convert.bf16 all_lanes target_type=fp32 rhne D20, V21; 	nop // D20=[V20,V21]
+               	nop; 	nop; 	mac.f32  V12, V18, V14; 	nop
+               	nop; 	nop; 	mac.f32  V19, V22, V14; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mac.f32  V17, V16, V15; 	nop
+               	nop; 	nop; 	mac.f32  V13, V20, V15; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V10, V10, V12, SP1; 	nop
+               	nop; 	nop; 	add.f32  V11, V11, V19, SP1; 	nop
+               	nop; 	add.i32  b00001 I9, 0x40, I9; 	nop; 	st_tnsr  0x3, I9, V11
+               	nop; 	add.i32  b00001 I9, 0xffffffc0, I9; 	add.f32  V9, V9, V17, SP2; 	st_tnsr  0x3, I9, V10
+               	nop; 	add.i32  b00001 I10, 0x40, I10; 	add.f32  V8, V8, V13, SP2; 	st_tnsr  0x3, I10, V9
+               	nop; 	add.i32  b00001 I10, 0xffffffc0, I10; 	nop; 	st_tnsr  0x3, I10, V8
+
+.LBB0_7:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

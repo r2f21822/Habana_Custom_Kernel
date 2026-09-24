@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmatrix_mul_fwd_f32.a matrix_mul_fwd_f32_x86.o
+/usr/bin/ranlib libmatrix_mul_fwd_f32.a

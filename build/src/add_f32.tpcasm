@@ -1,0 +1,118 @@
+
+.//add_f32.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	nop; 	add.i32  b11111 I4, I1, I0; 	nop; 	cache_invalidate 
+               	nop; 	mov_irf_dim  0x0 S0, I0; 	nop; 	cache_flush 
+               	nop; 	mov_irf_dim  0x0 S1, I4; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	shl.i32  S0, S0, 0x6; 	nop; 	nop
+               	nop; 	shl.i32  S1, S1, 0x6; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_geq.i32  SP1, S0, S1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_11, SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b11101, 0x0; 	mov_irf_dim  0x1 S5, I0; 	nop; 	nop
+               	mov  b11111 I3, I2; 	mov_irf_dim  0x1 S6, I4; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S2, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S3, I4; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S4, I0; 	nop; 	nop
+               	nop; 	shl.i32  S5, S5, 0x2; 	nop; 	nop
+               	nop; 	shl.i32  S6, S6, 0x2; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S7, I4; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x4 S8, I0; 	nop; 	nop
+               	set_indx  I3, b00010, S5; 	mov_irf_dim  0x4 S9, I4; 	nop; 	nop
+               	nop; 	add.i32  S10, S5, 0xffffffff; 	nop; 	nop
+               	nop; 	add.i32  S11, S5, 0x4; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b00010, S10; 	nop; 	nop; 	nop
+
+.LBB0_2:
+               	set_indx  I3, b00001, S0; 	set_indx  I2, b00001, S0; 	nop; 	nop
+               	loop S8, S9, 1, <, .LBB0_10
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_3:
+               	set_indx  I3, b10000, S32; 	set_indx  I2, b10000, S32; 	nop; 	nop
+               	loop S4, S7, 1, <, .LBB0_9
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	loop S2, S3, 1, <, .LBB0_8
+               	set_indx  I3, b01000, S33; 	set_indx  I2, b01000, S33; 	nop; 	nop
+
+.LBB0_5:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I3, b00100, S34; 	set_indx  I2, b00100, S34; 	nop; 	nop
+               	ld_tnsr  V0, 0x0, I3; 	nop; 	nop; 	nop
+               	ld_tnsr  V2, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V1, 0x0, I3; 	nop; 	nop; 	nop
+               	ld_tnsr  V3, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V4, 0x0, I3; 	nop; 	nop; 	nop
+               	ld_tnsr  V6, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V5, 0x0, I3; 	nop; 	nop; 	nop
+               	loop S11, S6, 4, <, .LBB0_7
+               	ld_tnsr  V7, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+
+.LBB0_6:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_tnsr  V0, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V8, V0, V2; 	nop
+               	ld_tnsr  V2, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	add.f32  V8, V1, V3; 	st_tnsr  0x2, I2, V8
+               	ld_tnsr  V1, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V9, V4, V6; 	nop
+               	ld_tnsr  V3, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	add.f32  V8, V5, V7; 	st_tnsr  0x2, I2, V8
+               	ld_tnsr  V4, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	ld_tnsr  V6, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x2, I2, V9
+               	nop; 	nop; 	nop; 	nop
+               	ld_tnsr  V5, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	ld_tnsr  V7, 0x1, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x2, I2, V8
+
+.LBB0_7:
+               	set_indx  I3, b00010, S5; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V0, V0, V2; 	nop
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V1, V1, V3; 	st_tnsr  0x2, I2, V0
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V0, V4, V6; 	st_tnsr  0x2, I2, V1
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V1, V5, V7; 	st_tnsr  0x2, I2, V0
+               	set_indx  I2, b00010, S10; 	nop; 	nop; 	st_tnsr  0x2, I2, V1
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_10:
+               	nop; 	add.i32  S0, S0, 0x40; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_less.i32  SP1, S0, S1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_2, SP1; 	nop; 	nop
+
+.LBB0_11:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

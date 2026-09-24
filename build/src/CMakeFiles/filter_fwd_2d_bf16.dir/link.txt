@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfilter_fwd_2d_bf16.a filter_fwd_2d_bf16_x86.o
+/usr/bin/ranlib libfilter_fwd_2d_bf16.a

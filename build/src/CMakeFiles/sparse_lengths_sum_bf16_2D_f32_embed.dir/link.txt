@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsparse_lengths_sum_bf16_2D_f32_embed.a sparse_lengths_sum_bf16_2D_f32_embed_x86.o
+/usr/bin/ranlib libsparse_lengths_sum_bf16_2D_f32_embed.a

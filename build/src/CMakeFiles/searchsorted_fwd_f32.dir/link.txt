@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsearchsorted_fwd_f32.a searchsorted_fwd_f32_x86.o
+/usr/bin/ranlib libsearchsorted_fwd_f32.a

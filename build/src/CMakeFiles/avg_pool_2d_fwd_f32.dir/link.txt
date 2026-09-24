@@ -1,0 +1,2 @@
+/usr/bin/ar qc libavg_pool_2d_fwd_f32.a avg_pool_2d_fwd_f32_x86.o
+/usr/bin/ranlib libavg_pool_2d_fwd_f32.a

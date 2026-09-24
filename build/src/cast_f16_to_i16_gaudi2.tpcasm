@@ -1,0 +1,114 @@
+
+.//cast_f16_to_i16_gaudi2.o:	file format elf32-i386
+
+TPC architecture: gaudi2
+
+Disassembly of section .text:
+
+main:
+               	nop; 	nop; 	nop; 	cache_invalidate lu // compressed, part 1
+               	ld_l mmio S1, 0x538; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	or.i32  S1, S1, 0x1000000; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	st_l mmio 0x538, S1 // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	ld_l mmio S1, 0xca8; 	add.i32  b11111 I3, I1, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x0 S2, I0; 	nop; 	st_l mmio 0xca8, S0
+               	nop; 	mov_irf_dim  0x0 S3, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	shl.i32  S0, S2, 0x7; 	nop; 	nop // compressed, part 2
+               	nop; 	shl.i32  S2, S3, 0x7; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	cmp_geq.i32  SP1, S0, S2; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	jmpr .LBB0_12, SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b11111, 0x0; 	mov_irf_dim  0x1 S6, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x1 S7, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov_irf_dim  0x2 S3, I0; 	nop; 	nop // compressed, part 2
+               	nop; 	mov_irf_dim  0x2 S4, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov_irf_dim  0x3 S5, I0; 	nop; 	nop // compressed, part 2
+               	nop; 	shl.i32  S6, S6, 0x2; 	nop; 	nop // compressed, part 1
+               	nop; 	shl.i32  S7, S7, 0x2; 	nop; 	nop // compressed, part 2
+               	nop; 	mov_irf_dim  0x3 S8, I3; 	nop; 	nop // compressed, part 1
+               	nop; 	mov_irf_dim  0x4 S9, I0; 	nop; 	nop // compressed, part 2
+               	nop; 	mov_irf_dim  0x4 S10, I3; 	nop; 	nop
+
+.LBB0_3:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	set_indx  I2, b00001, S0; 	nop; 	nop; 	nop // compressed, part 2
+               	loop S9, S10, 1, <, .LBB0_11
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	set_indx  I2, b10000, S32; 	nop; 	nop; 	nop
+               	loop S5, S8, 1, <, .LBB0_10
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_5:
+               	set_indx  I2, b01000, S33; 	nop; 	nop; 	nop
+               	loop S3, S4, 1, <, .LBB0_9
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_6:
+               	set_indx  I2, b00100, S34; 	nop; 	nop; 	nop
+               	loop S6, S7, 1, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_7:
+               	set_indx  I2, b00010, S35; 	nop; 	nop; 	nop // compressed, part 1
+               	ld_tnsr  V0, 0x0, I2; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	convert.f16 target_type=int16  V0, V0; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I2, V0
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_10:
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_11:
+               	nop; 	add.i32  S0, S0, 0x80; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	cmp_less.i32  SP1, S0, S2; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	jmpr .LBB0_3, SP1; 	nop; 	nop
+
+.LBB0_12:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	st_l mmio 0xca8, S1 // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2

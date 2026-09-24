@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmamba_pscan_update_bf16_gaudi3.a mamba_pscan_update_bf16_gaudi3_x86.o
+/usr/bin/ranlib libmamba_pscan_update_bf16_gaudi3.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libadd_f32_gaudi2.a add_f32_gaudi2_x86.o
+/usr/bin/ranlib libadd_f32_gaudi2.a

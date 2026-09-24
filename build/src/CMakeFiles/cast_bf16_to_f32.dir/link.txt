@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcast_bf16_to_f32.a cast_bf16_to_f32_x86.o
+/usr/bin/ranlib libcast_bf16_to_f32.a

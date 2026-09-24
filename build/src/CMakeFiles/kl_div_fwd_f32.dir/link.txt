@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkl_div_fwd_f32.a kl_div_fwd_f32_x86.o
+/usr/bin/ranlib libkl_div_fwd_f32.a

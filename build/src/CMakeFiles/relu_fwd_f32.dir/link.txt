@@ -1,0 +1,2 @@
+/usr/bin/ar qc librelu_fwd_f32.a relu_fwd_f32_x86.o
+/usr/bin/ranlib librelu_fwd_f32.a

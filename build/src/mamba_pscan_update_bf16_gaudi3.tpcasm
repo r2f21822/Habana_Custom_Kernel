@@ -1,0 +1,192 @@
+
+.//mamba_pscan_update_bf16_gaudi3.o:	file format elf32-i386
+
+TPC architecture: gaudi3
+
+Disassembly of section .text:
+
+main:
+               	ld_l mmio S36, 0x14; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	st_l mmio 0x14, S36 // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	ld_l mmio S36, 0x20; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	st_l mmio 0x20, S36 // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	ld_l mmio S36, 0x134; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	st_l mmio 0x134, S36 // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	ld_l mmio S36, 0x21c0; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	st_l mmio 0x21c0, S36 // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	ld_l mmio S36, 0x8; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	or.i32  S36, S36, 0x2000000; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	st_l mmio 0x8, S36 // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I32, b11111, 0x0; 	add.i32  b11111 I38, I1, I0; 	nop; 	nop
+               	ld_l mmio S36, 0x2010; 	mov_irf_dim  0x0 S38, I0; 	nop; 	nop
+               	mov  b11111 I33, I32; 	mov_irf_dim  0x3 S41, I0; 	nop; 	nop
+               	mov  b11111 I34, I32; 	mov_irf_dim  0x0 S40, I38; 	nop; 	nop
+               	mov  b11111 I35, I32; 	mov_irf_dim  0x3 S42, I38; 	nop; 	nop
+               	mov  b11111 I36, I32; 	mov_irf_dim  0x2 S37, I0; 	nop; 	nop
+               	mov  b11111 I37, I32; 	shl.i32  S38, S38, 0x7; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S39, I38; 	nop; 	nop // compressed, part 1
+               	nop; 	shl.i32  S40, S40, 0x7; 	nop; 	nop // compressed, part 2
+               	loop S41, S42, 1, <, .LBB0_9
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_2:
+               	set_indx  I32, b01000, S12; 	set_indx  I33, b01000, S12; 	nop; 	set_indx  I34, b01000, S12
+               	set_indx  I35, b01000, 0x0; 	set_indx  I36, b01000, S12; 	nop; 	set_indx  I37, b01000, S12
+               	loop S37, S39, 1, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_3:
+               	set_indx  I32, b00100, S13; 	set_indx  I33, b00100, S13; 	nop; 	set_indx  I34, b00100, S13
+               	set_indx  I35, b00100, 0x0; 	set_indx  I36, b00100, S13; 	nop; 	set_indx  I37, b00100, S13
+               	loop S38, S40, 128, <, .LBB0_7
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	mov.bf16  V40, 0x0; 	set_indx  I32, b00001, S14; 	nop; 	set_indx  I34, b00001, 0x0
+               	set_indx  I35, b00001, S14; 	set_indx  I36, b00001, S14; 	nop; 	set_indx  I37, b00001, S14
+               	loop 0, S36, 1, <, .LBB0_6
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_5:
+               	set_indx  I34, b00010, S15; 	set_indx  I32, b00010, S15; 	nop; 	set_indx  I35, b00010, 0x0
+               	set_indx  I36, b00010, 0x0; 	set_indx  I37, b00010, 0x0; 	nop; 	gen_addr dt=int8 AD8, 0x2, I34
+               	ld_tnsr  V41, 0x0, I32; 	nop; 	nop; 	nop // compressed, part 1
+               	ld_g  V42, AD8; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mul.bf16  V41, V41, V42; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.bf16  V40, V40, V41; 	nop
+
+.LBB0_6:
+               	ld_tnsr  V41, 0x4, I36; 	set_indx  I33, b00001, S14; 	mov.bf16  V42, 0x0; 	nop
+               	ld_tnsr  V45, 0x3, I35; 	nop; 	mov.bf16  V46, 0x0; 	nop
+               	ld_tnsr  V44, 0x1, I33; 	nop; 	mov.bf16  V47, 0x3f80; 	nop
+               	mov.bf16  V0, 0x3f00; 	nop; 	nop; 	nop
+               	mov  V43, V42; 	nop; 	mul.bf16  V1, V41, 0x3f00; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mac.bf16  V40, V45, V44; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.bf16 force_sign0 V2, V1, V1, V1; 	nop
+               	nop; 	nop; 	extract_exp.bf16  V3, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	fclass.bf16  V4, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	get_lut_entry_and_interval_start.bf16 tanh D44, V2, 0x4; 	nop // compressed, part 2 , D44=[V44,V45]
+               	nop; 	nop; 	cmp_less.i16  VP0, V3, 0x0; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	lookup_2c   BV16 part1 D42, V44, 0x1a6; 	nop; 	sub.bf16  V45, V2, V45; 	nop // D42=[V42,V43]
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	lookup_2c   BV16 part2 D42, V44, 0x1a6; 	nop; 	nop; 	nop // compressed, part 2 , D42=[V42,V43]
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	lookup_1c   BV16 part1 V46, V44, 0x1a9; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	lookup_1c   BV16 part2 V46, V44, 0x1a9; 	nop; 	mac.bf16  V42, V43, V45; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mac.bf16  V46, V42, V45; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mul.bf16  V46, V46, V2, VP0; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_grt.i16     V42, V3, 0x1, V47, V46; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.bf16  V42, V42, V1, V42; 	nop
+               	nop; 	nop; 	calc_fp_special.bf16 func=tanh V42, V4, V4; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	mac.bf16  V0, V42, 0x3f00; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	mul.bf16  V41, V41, V0; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mul.bf16  V40, V40, V41; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x5, I37, V40
+
+.LBB0_7:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_8:
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop

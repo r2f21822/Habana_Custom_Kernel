@@ -1,0 +1,2 @@
+/usr/bin/ar qc librelu6_fwd_bf16.a relu6_fwd_bf16_x86.o
+/usr/bin/ranlib librelu6_fwd_bf16.a

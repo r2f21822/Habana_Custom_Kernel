@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcustomdiv_fwd_f32.a customdiv_fwd_f32_x86.o
+/usr/bin/ranlib libcustomdiv_fwd_f32.a

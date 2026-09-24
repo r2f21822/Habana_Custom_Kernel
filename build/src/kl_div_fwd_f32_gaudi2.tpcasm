@@ -1,0 +1,577 @@
+
+.//kl_div_fwd_f32_gaudi2.o:	file format elf32-i386
+
+TPC architecture: gaudi2
+
+Disassembly of section .text:
+
+main:
+               	ld_l mmio S2, 0x538; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	or.i32  S2, S2, 0x1000000; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	st_l mmio 0x538, S2 // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	ld_l mmio S2, 0x10; 	mov  SP2, S1; 	mov.f32  V6, 0x0; 	nop
+               	ld_l mmio S3, 0x18; 	nop; 	mov.f32  V21, 0x0; 	nop
+               	ld_l mmio S1, 0x20; 	nop; 	mov.f32  V2, 0x0; 	nop
+               	ld_l mmio S4, 0x28; 	nop; 	mov.f32  V4, 0x0; 	nop
+               	ld_l mmio S5, 0x30; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	cmp_grt.i32  SP1, S5, 0x0; 	nop; 	nop
+               	nop; 	jmpr .LBB0_13, !SP2; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_24, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V6, 0x0; 	mov.i32  S6, 0x0; 	mov.f32  V21, 0x0; 	set_indx  I2, b11111, 0x0
+               	mov.f32  V2, 0x0; 	nop; 	mov  V0, V_LANE_ID_32; 	nop
+               	nop; 	nop; 	mov.f32  V4, 0x0; 	st_l_v  0x0, V0
+
+.LBB0_4:
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b10000, S6; 	nop; 	nop; 	nop
+               	loop 0, S4, 1, <, .LBB0_12
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_5:
+               	set_indx  I2, b01000, S32; 	nop; 	nop; 	nop
+               	loop 0, S1, 1, <, .LBB0_11
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_6:
+               	set_indx  I2, b00100, S33; 	nop; 	nop; 	nop
+               	loop 0, S2, 64, <, .LBB0_10
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_7:
+               	ld_l_v  V0, 0x0; 	set_indx  I2, b00001, S34; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.i32  V5, V0, S34; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	cmp_geq.u32  VP1, V5, S2; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	loop 0, S3, 4, <, .LBB0_9
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_8:
+               	mov.f32  V7, 0x3f000000; 	add.i32  S7, S35, 0x1; 	mov.f32  V8, 0x3f000000; 	set_indx  I2, b00010, S35
+               	ld_tnsr  V17, 0x1, I2; 	add.i32  S8, S35, 0x2; 	mov.i32  V1, 0x0; 	st_l_v  0x100, V4
+               	ld_tnsr  V5, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	st_l_v  0x200, V2
+               	ld_tnsr  V18, 0x1, I2; 	nop; 	nop; 	st_l_v  0x300, V6
+               	ld_tnsr  V6, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	mov.f32  V10, 0x3f000000; 	nop
+               	mov.f32  V11, 0x3f000000; 	cmp_less.i32  SP3, S7, S3; 	nop; 	nop
+               	ld_tnsr  V19, 0x1, I2; 	add.i32  S7, S35, 0x3; 	mac.f32  V8, V17, 0x3fb8aa3b; 	nop
+               	ld_tnsr  V13, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	sub.f32  V0, V17, V5; 	nop
+               	ld_tnsr  V20, 0x1, I2; 	cmp_less.i32  SP2, S8, S3; 	mov  V14, V18; 	st_l_v  0x400, V0
+               	mov.i32  V9, 0x0; 	nop; 	mac.f32  V10, V18, 0x3fb8aa3b; 	nop
+               	mov  V15, V19; 	cmp_less.i32  SP1, S7, S3; 	sub.f32  V0, V18, V6; 	nop
+               	mov.i32  V12, 0x0; 	nop; 	mac.f32  V11, V19, 0x3fb8aa3b; 	nop
+               	mov  V35, V20; 	nop; 	convert.f32 all_lanes target_type=int32 rhne V27, V8; 	st_l_v  0x500, V0
+               	mov.i32  V8, 0x0; 	nop; 	mac.f32  V7, V20, 0x3fb8aa3b; 	nop
+               	mov.i32  V38, 0x0; 	nop; 	sub.f32  V0, V19, V13; 	nop
+               	mov.i32  V30, 0x0; 	nop; 	convert.f32 all_lanes target_type=int32 rhne V28, V10; 	st_l_v  0x600, V0
+               	mov.i32  V39, 0x0; 	nop; 	mov  V10, V17; 	nop
+               	mov.i32  V22, 0x0; 	nop; 	convert.f32 all_lanes target_type=int32 rhne V29, V11; 	nop
+               	mov.i32  V4, 0x0; 	nop; 	and.i32  V31, V17, 0x7fffffff; 	nop
+               	mov.i32  V23, 0x1; 	nop; 	convert.f32 all_lanes target_type=int32 rhne V33, V7; 	nop
+               	mov.i32  V5, 0x0; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V7, V27; 	nop
+               	mov.i32  V24, 0x0; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V11, V28; 	nop
+               	mov.i32  V32, 0x0; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V13, V29; 	nop
+               	mov.i32  V2, 0x0; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V34, V33; 	nop
+               	mov.i32  V16, 0x0; 	nop; 	mac.f32 neg V10, V7, 0x3f318000; 	nop
+               	mov.i32  V36, 0x0; 	nop; 	mac.f32 neg V14, V11, 0x3f318000; 	nop
+               	mov.f32  V25, 0x0; 	nop; 	mac.f32 neg V15, V13, 0x3f318000; 	nop
+               	nop; 	nop; 	mac.f32 neg V35, V34, 0x3f318000; 	nop
+               	ld_tnsr  V7, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	mac.f32 neg V10, V7, 0xb95e8083; 	nop
+               	mov.f32  V26, 0x7f800000; 	nop; 	nop; 	nop
+               	mov.i32  V11, 0x0; 	nop; 	mac.f32 neg V14, V11, 0xb95e8083; 	nop
+               	nop; 	nop; 	mac.f32 neg V15, V13, 0xb95e8083; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32 neg V35, V34, 0xb95e8083; 	nop // compressed, part 2
+               	nop; 	nop; 	and.i32  V37, V18, 0x7fffffff; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V10, V10, 0x3fb8aa3b; 	nop // compressed, part 2
+               	nop; 	nop; 	and.i32  V34, V19, 0x7fffffff; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V13, V14, 0x3fb8aa3b; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V14, V15, 0x3fb8aa3b; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V15, V35, 0x3fb8aa3b; 	nop // compressed, part 2
+               	nop; 	nop; 	and.i32  V6, V20, 0x7fffffff; 	nop // compressed, part 1
+               	nop; 	nop; 	sub.f32  V7, V20, V7; 	nop // compressed, part 2
+               	nop; 	nop; 	cmp_geq.f32  VP2, V10, 0x0; 	nop // compressed, part 1
+               	nop; 	nop; 	cmp_geq.f32  VP3, V13, 0x0; 	nop // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32  V9, V10, VP2; 	nop // compressed, part 1
+               	nop; 	nop; 	and.i32  V12, V10, 0x7fffff, VP2; 	nop // compressed, part 2
+               	nop; 	nop; 	cmp_geq.f32  VP4, V14, 0x0; 	nop // compressed, part 1
+               	nop; 	nop; 	cmp_geq.f32  VP5, V15, 0x0; 	nop // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32  V8, V13, VP3; 	nop // compressed, part 1
+               	nop; 	nop; 	sub.i32 neg V35, V9, 0x0; 	nop // compressed, part 2
+               	nop; 	nop; 	or.i32  V12, V12, 0x800000, VP2; 	nop // compressed, part 1
+               	nop; 	nop; 	extract_exp.f32  V38, V14, VP4; 	nop // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32  V11, V15, VP5; 	nop // compressed, part 1
+               	nop; 	nop; 	and.i32  V30, V13, 0x7fffff, VP3; 	nop // compressed, part 2
+               	nop; 	nop; 	min.i32  V9, V35, 0x18, VP2; 	nop // compressed, part 1
+               	nop; 	nop; 	sub.i32 neg V35, V8, 0x0; 	nop // compressed, part 2
+               	nop; 	nop; 	and.i32  V39, V14, 0x7fffff, VP4; 	nop // compressed, part 1
+               	nop; 	nop; 	and.i32  V1, V15, 0x7fffff, VP5; 	nop // compressed, part 2
+               	nop; 	nop; 	sub.i32 neg V0, V38, 0x0; 	nop // compressed, part 1
+               	nop; 	nop; 	shr.i32  V12, V12, V9, VP2; 	nop // compressed, part 2
+               	nop; 	nop; 	sub.i32 neg V3, V11, 0x0; 	nop // compressed, part 1
+               	nop; 	nop; 	or.i32  V30, V30, 0x800000, VP3; 	nop // compressed, part 2
+               	nop; 	nop; 	min.i32  V8, V35, 0x18, VP3; 	nop // compressed, part 1
+               	nop; 	nop; 	or.i32  V39, V39, 0x800000, VP4; 	nop // compressed, part 2
+               	nop; 	nop; 	or.i32  V12, V12, 0x3f800000, VP2; 	nop // compressed, part 1
+               	nop; 	nop; 	min.i32  V38, V0, 0x18, VP4; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V12, V10, 0x40000000, !VP2; 	nop // compressed, part 1
+               	nop; 	nop; 	shr.i32  V30, V30, V8, VP3; 	nop // compressed, part 2
+               	nop; 	nop; 	or.i32  V1, V1, 0x800000, VP5; 	nop // compressed, part 1
+               	nop; 	nop; 	min.i32  V11, V3, 0x18, VP5; 	nop // compressed, part 2
+               	nop; 	nop; 	shr.i32  V39, V39, V38, VP4; 	nop // compressed, part 1
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D8, V12, 0x11; 	nop // compressed, part 2 , D8=[V8,V9]
+               	nop; 	nop; 	or.i32  V30, V30, 0x3f800000, VP3; 	nop // compressed, part 1
+               	nop; 	nop; 	and.i32  V22, V12, 0x7fffff, !VP2; 	nop // compressed, part 2
+               	nop; 	nop; 	shr.i32  V1, V1, V11, VP5; 	nop // compressed, part 1
+               	nop; 	nop; 	or.i32  V39, V39, 0x3f800000, VP4; 	nop // compressed, part 2
+               	lookup_1c   BV32 V3, V8, 0x100; 	nop; 	sub.f32  V0, V12, V9; 	nop
+               	nop; 	nop; 	add.f32  V30, V13, 0x40000000, !VP3; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V39, V14, 0x40000000, !VP4; 	nop // compressed, part 2
+               	nop; 	nop; 	or.i32  V1, V1, 0x3f800000, VP5; 	nop
+               	lookup_2c   BV32 D8, V8, 0x100; 	nop; 	sel_eq.i32      V24, V22, 0x0, V24, V23, !VP2; 	nop // D8=[V8,V9]
+               	nop; 	nop; 	add.f32  V1, V15, 0x40000000, !VP5; 	nop // compressed, part 1
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D10, V30, 0x11; 	nop // compressed, part 2 , D10=[V10,V11]
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D12, V39, 0x11; 	nop // compressed, part 1 , D12=[V12,V13]
+               	nop; 	nop; 	and.i32  V4, V39, 0x7fffff, !VP4; 	nop // compressed, part 2
+               	nop; 	nop; 	and.i32  V32, V30, 0x7fffff, !VP3; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V8, V9, V0; 	nop // compressed, part 2
+               	nop; 	nop; 	get_lut_entry_and_interval_start.f32  D14, V1, 0x11; 	nop // compressed, part 1 , D14=[V14,V15]
+               	nop; 	nop; 	and.i32  V2, V1, 0x7fffff, !VP5; 	nop // compressed, part 2
+               	lookup_1c   BV32 V4, V12, 0x100; 	nop; 	sel_eq.i32      V5, V4, 0x0, V5, V23, !VP4; 	nop
+               	nop; 	nop; 	sub.f32  V30, V30, V11; 	nop // compressed, part 1
+               	nop; 	nop; 	sub.f32  V35, V39, V13; 	nop // compressed, part 2
+               	lookup_1c   BV32 V15, V10, 0x100; 	nop; 	sub.f32  V1, V1, V15; 	nop
+               	nop; 	nop; 	mac.f32  V3, V8, V0; 	nop
+               	lookup_2c   BV32 D8, V12, 0x100; 	nop; 	sub.i32  V0, V27, V24; 	nop // D8=[V8,V9]
+               	nop; 	nop; 	sel_eq.i32      V36, V32, 0x0, V36, V23, !VP3; 	nop
+               	lookup_2c   BV32 D10, V10, 0x100; 	nop; 	sel_eq.i32      V16, V2, 0x0, V16, V23, !VP5; 	nop // D10=[V10,V11]
+               	nop; 	nop; 	sub.i32  V5, V29, V5; 	nop // compressed, part 1
+               	lookup_2c   BV32 D12, V14, 0x100; 	nop; 	nop; 	nop // compressed, part 2 , D12=[V12,V13]
+               	nop; 	nop; 	mac.f32  V8, V9, V35; 	nop
+               	lookup_1c   BV32 V9, V14, 0x100; 	nop; 	sub.i32  V2, V28, V36; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V14, V3; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V10, V11, V30; 	nop // compressed, part 2
+               	nop; 	nop; 	sub.i32  V11, V33, V16; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V12, V13, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	add.i32  V0, V0, V14; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V4, V8, V35; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mac.f32  V15, V10, V30; 	nop // compressed, part 2
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V0, V0, V3, V3; 	nop
+               	nop; 	nop; 	mac.f32  V9, V12, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32 biased V3, V4; 	nop
+               	nop; 	nop; 	sel_leq.f32     V0, V17, 0xc2aeac50, V25, V0; 	nop
+               	nop; 	nop; 	extract_exp.f32 biased V1, V15; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32 biased V8, V9; 	nop
+               	nop; 	nop; 	sel_geq.f32     V0, V17, 0x42b17218, V26, V0; 	nop
+               	nop; 	nop; 	add.i32  V1, V2, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	add.i32  V2, V5, V3; 	nop // compressed, part 2
+               	nop; 	nop; 	add.i32  V3, V11, V8; 	nop
+               	nop; 	nop; 	sel_grt.u32     V0, V31, 0x7f800000, V17, V0; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V1, V1, V15, V15; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V2, V2, V4, V4; 	nop
+               	ld_l_v  V4, 0x100; 	nop; 	nop; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V3, V3, V9, V9; 	nop
+               	ld_l_v  V5, 0x400; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.f32     V1, V18, 0xc2aeac50, V25, V1; 	nop
+               	nop; 	nop; 	sel_leq.f32     V2, V19, 0xc2aeac50, V25, V2; 	nop
+               	nop; 	nop; 	sel_leq.f32     V3, V20, 0xc2aeac50, V25, V3; 	nop
+               	nop; 	nop; 	mul.f32  V0, V5, V0; 	nop
+               	nop; 	nop; 	sel_geq.f32     V1, V18, 0x42b17218, V26, V1; 	nop
+               	mov.f32  V0, 0x0, VP1; 	nop; 	sel_geq.f32     V2, V19, 0x42b17218, V26, V2; 	nop
+               	nop; 	nop; 	sel_geq.f32     V3, V20, 0x42b17218, V26, V3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_grt.u32     V1, V37, 0x7f800000, V18, V1; 	nop
+               	nop; 	nop; 	add.f32  V4, V4, V0; 	nop
+               	nop; 	nop; 	sel_grt.u32     V0, V34, 0x7f800000, V19, V2; 	nop
+               	nop; 	nop; 	sel_grt.u32     V2, V6, 0x7f800000, V20, V3; 	nop
+               	ld_l_v  V6, 0x300; 	nop; 	nop; 	nop // compressed, part 1
+               	ld_l_v  V3, 0x500; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mul.f32  V5, V7, V2; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	ld_l_v  V3, 0x600; 	nop; 	mul.f32  V1, V3, V1; 	nop
+               	ld_l_v  V2, 0x200; 	nop; 	mov.f32  V5, 0x0, VP1; 	nop
+               	mov.f32  V1, 0x0, VP1; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	mul.f32  V0, V3, V0; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V6, V6, V5, SP1; 	nop // compressed, part 2
+               	mov.f32  V0, 0x0, VP1; 	nop; 	add.f32  V21, V21, V1, SP3; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V2, V2, V0, SP2; 	nop
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_10:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_11:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_12:
+               	nop; 	add.i32  S6, S6, 0x1; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	cmp_eq.i32  SP1, S6, S5; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	jmpr .LBB0_4, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_24; 	nop; 	nop
+
+.LBB0_13:
+               	nop; 	jmpr .LBB0_24, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	mov.f32  V6, 0x0; 	mov.i32  S6, 0x0; 	mov.f32  V21, 0x0; 	set_indx  I2, b11111, 0x0
+               	mov.f32  V2, 0x0; 	nop; 	mov  V0, V_LANE_ID_32; 	nop
+               	nop; 	nop; 	mov.f32  V4, 0x0; 	st_l_v  0x0, V0
+
+.LBB0_15:
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b10000, S6; 	nop; 	nop; 	nop
+               	loop 0, S4, 1, <, .LBB0_23
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_16:
+               	set_indx  I2, b01000, S32; 	nop; 	nop; 	nop
+               	loop 0, S1, 1, <, .LBB0_22
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_17:
+               	set_indx  I2, b00100, S33; 	nop; 	nop; 	nop
+               	loop 0, S2, 64, <, .LBB0_21
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_18:
+               	ld_l_v  V0, 0x0; 	set_indx  I2, b00001, S34; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.i32  V0, V0, S34; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	cmp_geq.u32  VP1, V0, S2; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	loop 0, S3, 4, <, .LBB0_20
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_19:
+               	mov.f32  V0, 0x3f800000; 	add.i32  S7, S35, 0x1; 	mov  V20, V21; 	set_indx  I2, b00010, S35
+               	ld_tnsr  V3, 0x1, I2; 	add.i32  S8, S35, 0x2; 	mov  V7, V4; 	st_l_v  0x200, V2
+               	ld_tnsr  V5, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	st_l_v  0x300, V6
+               	ld_tnsr  V8, 0x1, I2; 	nop; 	mov.f32  V2, 0xbdebd1b8; 	nop
+               	ld_tnsr  V5, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	st_l_v  0x600, V5
+               	mov.f32  V11, 0x3d9021bb; 	cmp_less.i32  SP3, S7, S3; 	sel_leq.f32     V6, V3, 0x0, V0, V3; 	nop
+               	ld_tnsr  V9, 0x1, I2; 	add.i32  S7, S35, 0x3; 	nop; 	st_l_v  0x400, V5
+               	ld_tnsr  V5, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	sel_leq.f32     V8, V8, 0x0, V0, V8; 	nop
+               	mov.f32  V1, 0xbdebd1b8; 	cmp_less.i32  SP2, S8, S3; 	nop; 	nop
+               	ld_tnsr  V10, 0x1, I2; 	nop; 	extract_exp.f32  V14, V6; 	st_l_v  0x100, V5
+               	nop; 	cmp_less.i32  SP1, S7, S3; 	form_fp_num.f32 exp_is_num V15, 0x7e, V6, V6; 	nop
+               	mov.f32  V38, 0xbdebd1b8; 	nop; 	sel_leq.f32     V9, V9, 0x0, V0, V9; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V16, 0x7e, V8, V8; 	nop
+               	mov.f32  V13, 0x3def251a; 	nop; 	sel_leq.f32     V5, V10, 0x0, V0, V10; 	nop
+               	mov.f32  V12, 0x3def251a; 	nop; 	nop; 	nop
+               	ld_tnsr  V0, 0x0, I2; 	add.i32  b00010 I2, 0x1, I2; 	add.f32  V19, V15, 0xbf3504f3; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V17, 0x7e, V9, V9; 	nop
+               	nop; 	nop; 	add.f32  V21, V16, 0xbf3504f3; 	nop
+               	nop; 	nop; 	form_fp_num.f32 exp_is_num V18, 0x7e, V5, V5; 	nop
+               	mov.f32  V39, 0x3def251a; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	shr.i32  V19, V19, 0x1f; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V22, V17, 0xbf3504f3; 	nop // compressed, part 1
+               	nop; 	nop; 	shr.i32  V21, V21, 0x1f; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V23, V18, 0xbf3504f3; 	nop
+               	mov.f32  V25, 0xbdfe5d4f; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V24, V19; 	nop
+               	mov.f32  V10, 0xbdfe5d4f; 	nop; 	sub.i32  V14, V14, V19; 	nop
+               	nop; 	nop; 	shr.i32  V22, V22, 0x1f; 	nop
+               	mov.f32  V29, 0x3e11e9bf; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V26, V21; 	nop
+               	nop; 	nop; 	shr.i32  V23, V23, 0x1f; 	nop
+               	mov.f32  V27, 0x3e11e9bf; 	nop; 	mul.f32  V24, V24, V15; 	nop
+               	mov.f32  V32, 0xbe2aae50; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V28, V22; 	nop
+               	mov.f32  V31, 0xbe2aae50; 	nop; 	mul.f32  V26, V26, V16; 	nop
+               	mov.f32  V4, 0xbe2aae50; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V30, V23; 	nop
+               	mov.f32  V34, 0x3e4cceac; 	nop; 	add.i32  V14, V14, 0x1; 	nop
+               	mov.f32  V33, 0x3e4cceac; 	nop; 	mul.f32  V28, V28, V17; 	nop
+               	nop; 	nop; 	add.f32  V24, V24, 0xbf800000; 	nop
+               	mov.f32  V19, 0xbe7ffffc; 	nop; 	mul.f32  V30, V30, V18; 	nop
+               	nop; 	nop; 	add.f32  V26, V26, 0xbf800000; 	nop
+               	nop; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V14, V14; 	st_l_v  0x500, V0
+               	mov.f32  V24, 0xbdebd1b8; 	nop; 	add.f32  V15, V15, V24; 	nop
+               	nop; 	nop; 	add.f32  V28, V28, 0xbf800000; 	nop
+               	mov.f32  V26, 0x3def251a; 	nop; 	add.f32  V16, V16, V26; 	nop
+               	nop; 	nop; 	add.f32  V30, V30, 0xbf800000; 	nop
+               	mov.f32  V35, 0xbe7ffffc; 	nop; 	mac.f32  V2, V11, V15; 	nop
+               	mov.f32  V28, 0xbdfe5d4f; 	nop; 	add.f32  V17, V17, V28; 	nop
+               	mov.f32  V0, 0xbe7ffffc; 	nop; 	mac.f32  V38, V11, V16; 	nop
+               	mov.f32  V30, 0x3e11e9bf; 	nop; 	add.f32  V18, V18, V30; 	nop
+               	mov.f32  V36, 0x3eaaaaaa; 	nop; 	mul.f32  V3, V15, V15; 	nop
+               	nop; 	nop; 	mov.f32  V37, 0x3eaaaaaa; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V24, V11, V17; 	nop // compressed, part 2
+               	mov.f32  V2, 0xbdfe5d4f; 	nop; 	mac.f32  V13, V2, V15; 	nop
+               	mov.f32  V11, 0x3e4cceac; 	nop; 	mac.f32  V1, V11, V18; 	nop
+               	nop; 	nop; 	mac.f32  V26, V38, V16; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V38, V3, 0xbf000000; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mac.f32  V39, V24, V17; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V24, V15, 0x3ee2a8ed; 	nop
+               	mov.f32  V13, 0x3e11e9bf; 	nop; 	mac.f32  V25, V13, V15; 	nop
+               	mov.f32  V1, 0x3eaaaaaa; 	nop; 	mac.f32  V12, V1, V18; 	nop
+               	mov.f32  V26, 0xbe2aae50; 	nop; 	mac.f32  V28, V26, V16; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mac.f32  V2, V39, V17; 	nop // compressed, part 2
+               	nop; 	nop; 	fclass.f32  V39, V6; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V29, V25, V15; 	nop // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32  V25, V8; 	nop
+               	mov.f32  V12, 0x3e4cceac; 	nop; 	mac.f32  V10, V12, V18; 	nop
+               	nop; 	nop; 	mac.f32  V30, V28, V16; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V28, V16, V16; 	nop // compressed, part 2
+               	mov.f32  V2, 0xbe7ffffc; 	nop; 	mac.f32  V13, V2, V17; 	nop
+               	nop; 	nop; 	sub.i32  V21, V25, V21; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V32, V29, V15; 	nop // compressed, part 2
+               	mov.f32  V10, 0x3eaaaaaa; 	nop; 	mac.f32  V27, V10, V18; 	nop
+               	nop; 	nop; 	mac.f32  V4, V30, V16; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V25, V28, 0xbf000000; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V26, V13, V17; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V13, V16, 0x3ee2a8ed; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V34, V32, V15; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V31, V27, V18; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V27, V18, 0x3ee2a8ed; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V11, V4, V16; 	nop // compressed, part 2
+               	nop; 	nop; 	add.i32  V4, V21, 0x1; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V12, V26, V17; 	nop // compressed, part 2
+               	nop; 	nop; 	extract_exp.f32  V26, V9; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V19, V34, V15; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V33, V31, V18; 	nop // compressed, part 1
+               	nop; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V4, V4; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V0, V11, V16; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V11, V17, V17; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V2, V12, V17; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V12, V18, V18; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V37, V19, V15; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V35, V33, V18; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V19, V17, 0x3ee2a8ed; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V1, V0, V16; 	nop // compressed, part 2
+               	nop; 	nop; 	sub.i32  V0, V26, V22; 	nop // compressed, part 1
+               	nop; 	nop; 	mac.f32  V10, V2, V17; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V2, V11, 0xbf000000; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V3, V3, V37; 	nop // compressed, part 2
+               	nop; 	nop; 	mac.f32  V36, V35, V18; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V22, V12, 0xbf000000; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V1, V28, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	extract_exp.f32  V26, V5; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V10, V11, V10; 	nop // compressed, part 1
+               	nop; 	nop; 	add.i32  V0, V0, 0x1; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V3, V15, V3; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V11, V12, V36; 	nop // compressed, part 2
+               	nop; 	nop; 	sub.i32  V23, V26, V23; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V1, V16, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V0, V0; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V10, V17, V10; 	nop // compressed, part 2
+               	nop; 	nop; 	fclass.f32  V21, V8; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V3, V38, V3; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V11, V18, V11; 	nop // compressed, part 1
+               	nop; 	nop; 	add.i32  V23, V23, 0x1; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V1, V25, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	fclass.f32  V12, V9; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V2, V2, V10; 	nop // compressed, part 1
+               	nop; 	nop; 	fclass.f32  V10, V5; 	nop // compressed, part 2
+               	nop; 	nop; 	convert.i32 all_lanes target_type=fp32 rhne V23, V23; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V11, V22, V11; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V22, V3, 0x3ee2a8ed; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V25, V1, 0x3ee2a8ed; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V26, V2, 0x3ee2a8ed; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V28, V11, 0x3ee2a8ed; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	add.f32  V22, V24, V22; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V13, V13, V25; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V19, V19, V26; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V24, V27, V28; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V3, V3, V22; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V1, V1, V13; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V2, V2, V19; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V11, V11, V24; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V3, V15, V3; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V1, V16, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V2, V17, V2; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V11, V18, V11; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V3, V3, V14; 	nop
+               	mov  V4, V7; 	nop; 	add.f32  V1, V1, V4; 	nop
+               	ld_l_v  V7, 0x600; 	nop; 	add.f32  V0, V2, V0; 	nop
+               	nop; 	nop; 	add.f32  V2, V11, V23; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V3, V3, 0x3f317218; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V1, V1, 0x3f317218; 	nop // compressed, part 1
+               	nop; 	nop; 	calc_fp_special.f32 func=log V3, V39, V39; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V0, V0, 0x3f317218; 	nop // compressed, part 1
+               	nop; 	nop; 	calc_fp_special.f32 func=log V1, V21, V21; 	nop // compressed, part 2
+               	nop; 	nop; 	mul.f32  V2, V2, 0x3f317218; 	nop // compressed, part 1
+               	nop; 	nop; 	calc_fp_special.f32 func=log V0, V12, V12; 	nop // compressed, part 2
+               	ld_l_v  V7, 0x400; 	nop; 	sub.f32  V3, V3, V7; 	nop
+               	nop; 	nop; 	calc_fp_special.f32 func=log V2, V10, V10; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	ld_l_v  V7, 0x100; 	nop; 	sub.f32  V1, V1, V7; 	nop
+               	nop; 	nop; 	mul.f32  V3, V6, V3; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	mov.f32  V3, 0x0, VP1; 	nop; 	nop; 	nop
+               	ld_l_v  V7, 0x500; 	nop; 	sub.f32  V0, V0, V7; 	nop
+               	nop; 	nop; 	mul.f32  V1, V8, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	mov.f32  V1, 0x0, VP1; 	nop; 	add.f32  V4, V4, V3; 	nop
+               	nop; 	nop; 	sub.f32  V2, V2, V7; 	nop // compressed, part 1
+               	nop; 	nop; 	mul.f32  V6, V9, V0; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mov.f32  V6, 0x0, VP1; 	nop // compressed, part 2
+               	nop; 	nop; 	add.f32  V20, V20, V1, SP3; 	nop
+               	ld_l_v  V2, 0x200; 	nop; 	mul.f32  V5, V5, V2; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	mov.f32  V5, 0x0, VP1; 	nop; 	nop; 	nop // compressed, part 2
+               	nop; 	nop; 	mov  V21, V20; 	nop // compressed, part 1
+               	nop; 	nop; 	add.f32  V2, V2, V6, SP2; 	nop // compressed, part 2
+               	ld_l_v  V6, 0x300; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	add.f32  V6, V6, V5, SP1; 	nop
+
+.LBB0_20:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_21:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_22:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_23:
+               	nop; 	add.i32  S6, S6, 0x1; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	cmp_eq.i32  SP1, S6, S5; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	jmpr .LBB0_15, !SP1; 	nop; 	nop
+
+.LBB0_24:
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b11111, 0x0; 	nop; 	add.f32  V0, V21, V4; 	nop
+               	nop; 	nop; 	mov  V1, V_LANE_ID_32; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.f32  V0, V2, V0; 	nop // compressed, part 2
+               	lookup_1c   BV32 V4, V1, 0x11f; 	nop; 	nop; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	lookup_2c   BV32 D2, V1, 0x11f; 	nop; 	nop; 	nop // compressed, part 1 , D2=[V2,V3]
+               	nop; 	nop; 	add.f32  V0, V6, V0; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov_dg.all sdg0=1 sdg1=0 sdg2=3 sdg3=2 weg0=3 weg1=3 weg2=3 weg3=3 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	mov_dg.all sdg0=2 sdg1=3 sdg2=0 sdg3=1 weg0=3 weg1=3 weg2=3 weg3=3 V1, V0, 0xffffffff; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mov_g g_en=0b11 dg_en=0b1111 V1, V0, 0xffffffff; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	shuffle.f32  V1, V0, V4; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	shuffle.f32  V1, V0, V2; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	shuffle.f32  V1, V0, V3; 	nop // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	add.f32  V0, V0, V1; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	mul.f32  V0, V0, S0; 	nop // compressed, part 2
+               	nop; 	nop; 	nop; 	st_tnsr  0x2, I2, V0
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2
+               	nop; 	nop; 	nop; 	nop     // compressed, part 1
+               	nop; 	nop; 	nop; 	nop     // compressed, part 2

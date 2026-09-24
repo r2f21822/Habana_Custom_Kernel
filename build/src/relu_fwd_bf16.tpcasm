@@ -1,0 +1,119 @@
+
+.//relu_fwd_bf16.o:	file format elf32-i386
+
+TPC architecture: gaudi
+
+Disassembly of section .text:
+
+main:
+               	nop; 	add.i32  b11111 I3, I1, I0; 	nop; 	cache_invalidate 
+               	nop; 	mov_irf_dim  0x0 S0, I0; 	nop; 	cache_flush 
+               	nop; 	mov_irf_dim  0x0 S1, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	shl.i32  S0, S0, 0x7; 	nop; 	nop
+               	nop; 	shl.i32  S1, S1, 0x7; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_geq.i32  SP1, S0, S1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_12, SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b11111, 0x0; 	mov_irf_dim  0x1 S5, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x1 S6, I3; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S2, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x2 S3, I3; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S4, I0; 	nop; 	nop
+               	nop; 	shl.i32  S5, S5, 0x2; 	nop; 	nop
+               	nop; 	shl.i32  S6, S6, 0x2; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x3 S7, I3; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x4 S8, I0; 	nop; 	nop
+               	nop; 	mov_irf_dim  0x4 S9, I3; 	nop; 	nop
+               	nop; 	add.i32  S10, S5, 0x4; 	nop; 	nop
+               	nop; 	cmp_less.i32  SP1, S5, S6; 	nop; 	nop
+
+.LBB0_2:
+               	set_indx  I2, b00001, S0; 	nop; 	nop; 	nop
+               	loop S8, S9, 1, <, .LBB0_11
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_3:
+               	set_indx  I2, b10000, S32; 	nop; 	nop; 	nop
+               	loop S4, S7, 1, <, .LBB0_10
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_4:
+               	loop S2, S3, 1, <, .LBB0_9
+               	set_indx  I2, b01000, S33; 	nop; 	nop; 	nop
+
+.LBB0_5:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	set_indx  I2, b00010, S5; 	set_indx  I2, b00100, S34; 	nop; 	nop
+               	ld_tnsr  V0, 0x0, I2; 	mov  b11111 I3, I2; 	nop; 	nop
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V1, 0x0, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V2, 0x0, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	ld_tnsr  V3, 0x0, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	jmpr .LBB0_8, !SP1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	loop S10, S6, 4, <, .LBB0_8
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_7:
+               	mov.bf16  V4, 0x0; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V5, V0, 0x0, V4, V0; 	nop
+               	ld_tnsr  V0, 0x0, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I2, V5
+               	nop; 	nop; 	sel_leq.bf16     V5, V1, 0x0, V4, V1; 	nop
+               	ld_tnsr  V1, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V6, V2, 0x0, V4, V2; 	nop
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I2, V5
+               	ld_tnsr  V2, 0x0, I3; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V4, V3, 0x0, V4, V3; 	nop
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I2, V6
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+               	ld_tnsr  V3, 0x0, I3; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I2, V4
+               	nop; 	add.i32  b00010 I2, 0x1, I2; 	nop; 	nop
+
+.LBB0_8:
+               	mov.bf16  V4, 0x0; 	mov  b11111 I3, I2; 	nop; 	nop
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V0, V0, 0x0, V4, V0; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V1, V1, 0x0, V4, V1; 	nop
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I2, V0
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I3, V1
+               	nop; 	nop; 	sel_leq.bf16     V0, V2, 0x0, V4, V2; 	nop
+               	nop; 	nop; 	sel_leq.bf16     V1, V3, 0x0, V4, V3; 	nop
+               	nop; 	add.i32  b00010 I3, 0x1, I3; 	nop; 	st_tnsr  0x1, I3, V0
+               	nop; 	nop; 	nop; 	st_tnsr  0x1, I3, V1
+
+.LBB0_9:
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_10:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+
+.LBB0_11:
+               	nop; 	add.i32  S0, S0, 0x80; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	cmp_less.i32  SP2, S0, S1; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	jmpr .LBB0_2, SP2; 	nop; 	nop
+
+.LBB0_12:
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	halt; 	halt; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
+               	nop; 	nop; 	nop; 	nop
