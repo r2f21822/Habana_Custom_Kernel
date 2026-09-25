@@ -86,9 +86,9 @@ int TrainBatchF32Test::runTest()
     }
     unsigned long long tsc1 = __rdtsc();
     auto t1 = std::chrono::steady_clock::now();
-    double ns = std::chrono::duration<double, std::nano>(t1 - t0).count() / REPS;
-    std::cout << "CPU: " << ns << " ns por treino, "
-              << (tsc1 - tsc0) / REPS << " ciclos" << std::endl;
+    double ns = std::chrono::duration<double, std::nano>(t1 - t0).count();
+    std::cout << "CPU: " << ns << " ns, "
+              << (tsc1 - tsc0)<< " ciclos" << std::endl;
     // Entrada do glue code
     m_in_defs.deviceId = tpc_lib_api::DEVICE_ID_GAUDI;
 
