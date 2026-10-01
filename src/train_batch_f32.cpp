@@ -1,3 +1,4 @@
+
 #include <vector>
 #include <cstring>
 #include <iostream>
@@ -7,8 +8,10 @@ extern unsigned char _binary___train_batch_f32_o_start;
 extern unsigned char _binary___train_batch_f32_o_end;
 
 // Deve bater com o kernel: NUM_FEATURES=2, NUM_SAMPLES=4
+
 static const uint64_t c_numFeatures = 2;
-static const uint64_t c_numSamples  = 4;
+static const uint64_t c_numSamples  = 264;
+static const uint64_t c_scratchSize = 64;
 
 // Kernel de 1 thread, o unico work item acessa o tensor INTEIRO
 
@@ -52,10 +55,10 @@ tpc_lib_api::GlueCodeReturn TrainBatchF32::GetGcDefinitions(
         return tpc_lib_api::GLUE_INCOMPATIBLE_INPUT_COUNT;
     }
     
-    // se tem 2 saidas: weights_out, bias_out
-    if (in_defs->outputTensorNr != 2)
+    // se tem 3 saidas: weights_out, bias_out, scratch
+    if (in_defs->outputTensorNr != 3)
     {
-        in_defs->outputTensorNr = 2;
+        in_defs->outputTensorNr = 3;
         return tpc_lib_api::GLUE_INCOMPATIBLE_OUTPUT_COUNT;
     }
 
@@ -71,18 +74,24 @@ tpc_lib_api::GlueCodeReturn TrainBatchF32::GetGcDefinitions(
     {
         return tpc_lib_api::GLUE_INCOMPATIBLE_INPUT_SIZE;
     }
+    
+        const uint64_t* scratchSz = in_defs->outputTensors[2].geometry.maxSizes;
+    if (scratchSz[0] != c_scratchSize)
+    {
+        return tpc_lib_api::GLUE_INCOMPATIBLE_OUTPUT_SIZE;
+    }
 
     // tipos: tudo F32
     bool typesOk = true;
     for (unsigned i = 0; i < 4; i++)
         if (in_defs->inputTensors[i].geometry.dataType != tpc_lib_api::DATA_F32) typesOk = false;
-    for (unsigned i = 0; i < 2; i++)
+    for (unsigned i = 0; i < 3; i++)
         if (in_defs->outputTensors[i].geometry.dataType != tpc_lib_api::DATA_F32) typesOk = false;
     if (!typesOk)
     {
         for (unsigned i = 0; i < 4; i++)
             in_defs->inputTensors[i].geometry.dataType = tpc_lib_api::DATA_F32;
-        for (unsigned i = 0; i < 2; i++)
+        for (unsigned i = 0; i < 3; i++)
             in_defs->outputTensors[i].geometry.dataType = tpc_lib_api::DATA_F32;
         return tpc_lib_api::GLUE_INCOMPATIBLE_DATA_TYPE;
     }
@@ -124,3 +133,5 @@ tpc_lib_api::GlueCodeReturn TrainBatchF32::GetGcDefinitions(
 
     return tpc_lib_api::GLUE_SUCCESS;
 }
+
+

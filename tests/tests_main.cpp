@@ -38,7 +38,8 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 #include "mamba_pscan_gaudi3_test.hpp"
 #include "mamba_pscan_update_gaudi3_test.hpp"
 #include "train_batch_f32_test.hpp"
-
+  
+   #include "xor_test.hpp"
 int check_arg(int argc, char** argv, const char* device, const char* test)
 {
     if( argc == 1 ||
@@ -437,6 +438,18 @@ int main(int argc, char** argv)
             return result;
         }
     }
+    
+ if(check_arg(argc, argv, "Gaudi", "XorTest"))
+{
+    XorTest xorins;
+    xorins.SetUp();
+    result = xorins.runTest();
+    xorins.TearDown();
+    if (result != 0)
+    {
+        return result;
+    }
+}
 
     // The following ones are for Gaudi2
     AvgPool2DF32Gaudi2Test avgpool2df32Gaudi2ins;

@@ -565,6 +565,20 @@ train_batch_f32/fast:
 .PHONY : train_batch_f32/fast
 
 # Convenience name for target.
+src/CMakeFiles/xor.dir/rule:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/xor.dir/rule
+.PHONY : src/CMakeFiles/xor.dir/rule
+
+# Convenience name for target.
+xor: src/CMakeFiles/xor.dir/rule
+.PHONY : xor
+
+# fast build rule for target.
+xor/fast:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/xor.dir/build.make src/CMakeFiles/xor.dir/build
+.PHONY : xor/fast
+
+# Convenience name for target.
 src/CMakeFiles/add_f32_gaudi2.dir/rule:
 	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/add_f32_gaudi2.dir/rule
 .PHONY : src/CMakeFiles/add_f32_gaudi2.dir/rule
@@ -1460,6 +1474,30 @@ train_batch_f32.cpp.s:
 	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/custom_tpc_perf_lib.dir/build.make src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.s
 .PHONY : train_batch_f32.cpp.s
 
+xor.o: xor.cpp.o
+.PHONY : xor.o
+
+# target to build an object file
+xor.cpp.o:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/custom_tpc_perf_lib.dir/build.make src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o
+.PHONY : xor.cpp.o
+
+xor.i: xor.cpp.i
+.PHONY : xor.i
+
+# target to preprocess a source file
+xor.cpp.i:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/custom_tpc_perf_lib.dir/build.make src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.i
+.PHONY : xor.cpp.i
+
+xor.s: xor.cpp.s
+.PHONY : xor.s
+
+# target to generate assembly for a file
+xor.cpp.s:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/custom_tpc_perf_lib.dir/build.make src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.s
+.PHONY : xor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1516,6 +1554,7 @@ help:
 	@echo "... spatial_conv_f32"
 	@echo "... train_batch_f32"
 	@echo "... user_lut_f32_gaudi2"
+	@echo "... xor"
 	@echo "... entry_points.o"
 	@echo "... entry_points.i"
 	@echo "... entry_points.s"
@@ -1600,6 +1639,9 @@ help:
 	@echo "... train_batch_f32.o"
 	@echo "... train_batch_f32.i"
 	@echo "... train_batch_f32.s"
+	@echo "... xor.o"
+	@echo "... xor.i"
+	@echo "... xor.s"
 .PHONY : help
 
 

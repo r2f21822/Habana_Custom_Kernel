@@ -46,3 +46,4 @@ e95dcce7cc2549693e53f6eecd2aa4dd src/sparse_lengths_sum_bf16_2D_f32_embed_x86.o
 8fd09022e0e41edb8c31b30c36d9848c src/spatial_conv_f32_x86.o
 a8d10bf43e379ec31940c749f5ba4ad9 src/train_batch_f32_x86.o
 fb856dc37734b090962905f7e585e0d0 src/user_lut_f32_gaudi2_x86.o
+cf6a40b3cfb76935750eb232846afd24 src/xor_x86.o

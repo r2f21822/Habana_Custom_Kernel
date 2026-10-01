@@ -754,6 +754,30 @@ train_batch_f32_test.cpp.s:
 	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tpc_kernel_tests.dir/build.make tests/CMakeFiles/tpc_kernel_tests.dir/train_batch_f32_test.cpp.s
 .PHONY : train_batch_f32_test.cpp.s
 
+xor_test.o: xor_test.cpp.o
+.PHONY : xor_test.o
+
+# target to build an object file
+xor_test.cpp.o:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tpc_kernel_tests.dir/build.make tests/CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.o
+.PHONY : xor_test.cpp.o
+
+xor_test.i: xor_test.cpp.i
+.PHONY : xor_test.i
+
+# target to preprocess a source file
+xor_test.cpp.i:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tpc_kernel_tests.dir/build.make tests/CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.i
+.PHONY : xor_test.cpp.i
+
+xor_test.s: xor_test.cpp.s
+.PHONY : xor_test.s
+
+# target to generate assembly for a file
+xor_test.cpp.s:
+	cd /home/rafa/Habana_Custom_Kernel/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tpc_kernel_tests.dir/build.make tests/CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.s
+.PHONY : xor_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -841,6 +865,9 @@ help:
 	@echo "... train_batch_f32_test.o"
 	@echo "... train_batch_f32_test.i"
 	@echo "... train_batch_f32_test.s"
+	@echo "... xor_test.o"
+	@echo "... xor_test.i"
+	@echo "... xor_test.s"
 .PHONY : help
 
 

@@ -259,4 +259,5 @@ tests/CMakeFiles/tpc_kernel_tests.dir/tests_main.cpp.o: \
  /home/rafa/Habana_Custom_Kernel/tests/train_batch_f32_test.hpp \
  /home/rafa/Habana_Custom_Kernel/tests/test_base.hpp \
  /home/rafa/Habana_Custom_Kernel/tests/tensor.h \
- /home/rafa/Habana_Custom_Kernel/tests/../src/train_batch_f32.hpp
+ /home/rafa/Habana_Custom_Kernel/tests/../src/train_batch_f32.hpp \
+ /home/rafa/Habana_Custom_Kernel/tests/xor_test.hpp

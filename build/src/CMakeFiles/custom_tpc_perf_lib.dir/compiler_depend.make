@@ -30,6 +30,7 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/entry_points.cpp.o: /home/rafa/Habana_Cus
   /home/rafa/Habana_Custom_Kernel/src/gaudi_src/sparse_lengths_sum_bf16.hpp \
   /home/rafa/Habana_Custom_Kernel/src/gaudi_src/spatial_conv_f32.hpp \
   /home/rafa/Habana_Custom_Kernel/src/train_batch_f32.hpp \
+  /home/rafa/Habana_Custom_Kernel/src/xor.hpp \
   /usr/include/alloca.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bits/alloc_traits.h \
@@ -3623,6 +3624,43 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
   /usr/lib/habanatools/include/gc_interface.h \
   /usr/lib/habanatools/include/tpc_kernel_lib_interface.h
 
+src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o: /home/rafa/Habana_Custom_Kernel/src/xor.cpp \
+  /home/rafa/Habana_Custom_Kernel/src/xor.hpp \
+  /usr/include/c++/13/cstring \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/habanatools/include/gc_interface.h \
+  /usr/lib/habanatools/include/tpc_kernel_lib_interface.h
+
+
+/home/rafa/Habana_Custom_Kernel/src/xor.cpp:
 
 /home/rafa/Habana_Custom_Kernel/src/spatial_reduction_kernels.cpp:
 
@@ -3639,10 +3677,6 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/leakyrelu_f32_gaudi.cpp:
 
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/kl_div_all.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -3735,6 +3769,12 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/c++/13/bits/stl_vector.h:
+
+/home/rafa/Habana_Custom_Kernel/src/train_batch_f32.cpp:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
@@ -3872,12 +3912,6 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 
 /usr/include/c++/13/iosfwd:
 
-/home/rafa/Habana_Custom_Kernel/src/train_batch_f32.cpp:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/kl_div_all.hpp:
 
 /home/rafa/Habana_Custom_Kernel/src/gaudi2_src/user_lut_gaudi2.hpp:
@@ -3895,6 +3929,8 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/spatial_conv_f32.cpp:
 
 /usr/include/c++/13/bits/stl_construct.h:
+
+/usr/lib/habanatools/include/tpc_kernel_lib_interface.h:
 
 /usr/include/c++/13/backward/binders.h:
 
@@ -3914,6 +3950,14 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 
 /usr/include/c++/13/bits/concept_check.h:
 
+/home/rafa/Habana_Custom_Kernel/src/gaudi_src/gather_fwd_i32.cpp:
+
+/usr/include/stdio.h:
+
+/home/rafa/Habana_Custom_Kernel/src/gaudi2_src/cast_f16_to_i16_gaudi2.cpp:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -3931,6 +3975,10 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /usr/include/c++/13/bits/memoryfwd.h:
 
 /home/rafa/Habana_Custom_Kernel/src/entry_points.hpp:
+
+/usr/include/c++/13/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -3972,6 +4020,8 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 
 /usr/include/c++/13/bits/exception_defines.h:
 
+/home/rafa/Habana_Custom_Kernel/src/xor.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
@@ -4001,8 +4051,6 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/printf_test.cpp:
 
 /usr/lib/habanatools/include/gc_interface.h:
-
-/usr/lib/habanatools/include/tpc_kernel_lib_interface.h:
 
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/softmax_bf16.hpp:
 
@@ -4153,11 +4201,3 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o: /home/rafa/Habana_
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /home/rafa/Habana_Custom_Kernel/src/gaudi_src/filter_fwd_2d_bf16.cpp:
-
-/usr/include/stdio.h:
-
-/home/rafa/Habana_Custom_Kernel/src/gaudi2_src/cast_f16_to_i16_gaudi2.cpp:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
-/home/rafa/Habana_Custom_Kernel/src/gaudi_src/gather_fwd_i32.cpp:

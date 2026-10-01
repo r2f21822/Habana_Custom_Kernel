@@ -34,6 +34,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/rafa/Habana_Custom_Kernel/tests/test_base.cpp" "tests/CMakeFiles/tpc_kernel_tests.dir/test_base.cpp.o" "gcc" "tests/CMakeFiles/tpc_kernel_tests.dir/test_base.cpp.o.d"
   "/home/rafa/Habana_Custom_Kernel/tests/tests_main.cpp" "tests/CMakeFiles/tpc_kernel_tests.dir/tests_main.cpp.o" "gcc" "tests/CMakeFiles/tpc_kernel_tests.dir/tests_main.cpp.o.d"
   "/home/rafa/Habana_Custom_Kernel/tests/train_batch_f32_test.cpp" "tests/CMakeFiles/tpc_kernel_tests.dir/train_batch_f32_test.cpp.o" "gcc" "tests/CMakeFiles/tpc_kernel_tests.dir/train_batch_f32_test.cpp.o.d"
+  "/home/rafa/Habana_Custom_Kernel/tests/xor_test.cpp" "tests/CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.o" "gcc" "tests/CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -131,6 +131,7 @@ src/CMakeFiles/custom_tpc_perf_lib.dir/entry_points.cpp.o: \
  /home/rafa/Habana_Custom_Kernel/src/gaudi2_src/user_lut_gaudi2.hpp \
  /home/rafa/Habana_Custom_Kernel/src/gaudi3_src/mamba_pscan_gaudi3.hpp \
  /home/rafa/Habana_Custom_Kernel/src/gaudi3_src/mamba_pscan_update_gaudi3.hpp \
+ /home/rafa/Habana_Custom_Kernel/src/xor.hpp \
  /home/rafa/Habana_Custom_Kernel/src/entry_points.hpp \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \

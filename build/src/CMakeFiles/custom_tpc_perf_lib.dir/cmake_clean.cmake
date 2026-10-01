@@ -55,6 +55,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/custom_tpc_perf_lib.dir/spatial_reduction_kernels.cpp.o.d"
   "CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o"
   "CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o.d"
+  "CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o"
+  "CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o.d"
   "libcustom_tpc_perf_lib.pdb"
   "libcustom_tpc_perf_lib.so"
 )

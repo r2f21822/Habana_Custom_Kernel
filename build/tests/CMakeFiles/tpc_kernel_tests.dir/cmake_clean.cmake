@@ -51,6 +51,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tpc_kernel_tests.dir/tests_main.cpp.o.d"
   "CMakeFiles/tpc_kernel_tests.dir/train_batch_f32_test.cpp.o"
   "CMakeFiles/tpc_kernel_tests.dir/train_batch_f32_test.cpp.o.d"
+  "CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.o"
+  "CMakeFiles/tpc_kernel_tests.dir/xor_test.cpp.o.d"
   "tpc_kernel_tests"
   "tpc_kernel_tests.pdb"
 )

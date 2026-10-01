@@ -82,6 +82,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/sparse_lengths_sum_bf16_2D_f32_embed.dir/DependInfo.cmake"
   "src/CMakeFiles/spatial_conv_f32.dir/DependInfo.cmake"
   "src/CMakeFiles/train_batch_f32.dir/DependInfo.cmake"
+  "src/CMakeFiles/xor.dir/DependInfo.cmake"
   "src/CMakeFiles/add_f32_gaudi2.dir/DependInfo.cmake"
   "src/CMakeFiles/avg_pool_2d_bwd_f32_gaudi2.dir/DependInfo.cmake"
   "src/CMakeFiles/avg_pool_2d_fwd_f32_gaudi2.dir/DependInfo.cmake"

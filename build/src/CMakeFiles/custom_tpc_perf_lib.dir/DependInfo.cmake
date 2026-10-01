@@ -36,6 +36,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/rafa/Habana_Custom_Kernel/src/gaudi_src/spatial_conv_f32.cpp" "src/CMakeFiles/custom_tpc_perf_lib.dir/gaudi_src/spatial_conv_f32.cpp.o" "gcc" "src/CMakeFiles/custom_tpc_perf_lib.dir/gaudi_src/spatial_conv_f32.cpp.o.d"
   "/home/rafa/Habana_Custom_Kernel/src/spatial_reduction_kernels.cpp" "src/CMakeFiles/custom_tpc_perf_lib.dir/spatial_reduction_kernels.cpp.o" "gcc" "src/CMakeFiles/custom_tpc_perf_lib.dir/spatial_reduction_kernels.cpp.o.d"
   "/home/rafa/Habana_Custom_Kernel/src/train_batch_f32.cpp" "src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o" "gcc" "src/CMakeFiles/custom_tpc_perf_lib.dir/train_batch_f32.cpp.o.d"
+  "/home/rafa/Habana_Custom_Kernel/src/xor.cpp" "src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o" "gcc" "src/CMakeFiles/custom_tpc_perf_lib.dir/xor.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

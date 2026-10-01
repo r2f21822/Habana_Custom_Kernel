@@ -40,6 +40,8 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 #include "user_lut_gaudi2.hpp"
 #include "mamba_pscan_gaudi3.hpp"
 #include "mamba_pscan_update_gaudi3.hpp"
+#include "xor.hpp"
+
 
 #include "entry_points.hpp"
 #include <stdio.h>
@@ -113,6 +115,9 @@ tpc_lib_api::GlueCodeReturn GetKernelGuids( _IN_    tpc_lib_api::DeviceId       
            //KLDivBwdF32Instance.GetKernelName(guids[GAUDI_KERNEL_KL_DIV_BWD_F32].name);
            TrainBatchF32 trainBatchF32Instance;                                              
            trainBatchF32Instance.GetKernelName(guids[GAUDI_KERNEL_TRAIN_BATCH_F32].name);   
+   
+           Xor xorInstance;
+           xorInstance.GetKernelName(guids[GAUDI_KERNEL_XOR].name);
         }
 
         if (kernelCount != nullptr)
@@ -394,6 +399,12 @@ InstantiateTpcKernel(_IN_  tpc_lib_api::HabanaKernelParams* params,
     if (strcmp(params->guid.name, kernelName) == 0)
     {
         return trainBatchF32Instance.GetGcDefinitions(params, instance);
+    }
+       Xor xorInstance;
+    xorInstance.GetKernelName(kernelName);
+    if (strcmp(params->guid.name, kernelName) == 0)
+    {
+        return xorInstance.GetGcDefinitions(params, instance);
     }
 
     /////// --- Gaudi2 

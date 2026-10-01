@@ -533,6 +533,19 @@ train_batch_f32/fast:
 .PHONY : train_batch_f32/fast
 
 #=============================================================================
+# Target rules for targets named xor
+
+# Build rule for target.
+xor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xor
+.PHONY : xor
+
+# fast build rule for target.
+xor/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/xor.dir/build.make src/CMakeFiles/xor.dir/build
+.PHONY : xor/fast
+
+#=============================================================================
 # Target rules for targets named add_f32_gaudi2
 
 # Build rule for target.
@@ -810,6 +823,7 @@ help:
 	@echo "... tpc_kernel_tests"
 	@echo "... train_batch_f32"
 	@echo "... user_lut_f32_gaudi2"
+	@echo "... xor"
 .PHONY : help
 
 
