@@ -1,5 +1,4 @@
 
-
 #include <cmath>
 #include <cstring>
 #include <iostream>
@@ -186,5 +185,4 @@ int TrainBatchF32Test::runTest()
     std::cout << "Train batch F32 test pass!!" << std::endl;
     return 0;
 }
-
 
